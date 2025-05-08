@@ -9,7 +9,7 @@ function recuperarSenha() {
       erro.textContent = '';
   
       // Chamada à API (substitua pela URL real)
-      fetch('https://seusite.com/api/esqueci-senha', {
+      fetch('https://back-end-festa-junina.onrender.com/api/esqueci-senha', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
