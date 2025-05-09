@@ -36,7 +36,7 @@ document.getElementById("adminForm").addEventListener("submit", function (e) {
 
   console.log("Enviando para a API:", novoAdmin);
 
-  fetch("http://10.90.146.37/api/api/Usuario/CadastroUser", {
+  fetch("https://back-end-festa-junina.onrender.com/api/Usuario/CadastroUser", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

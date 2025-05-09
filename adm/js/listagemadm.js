@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const adminList = document.querySelector(".admin-list");
   const addButton = document.querySelector(".add-button");
-  const API_URL = "http://10.90.146.37/api/api/Usuario";
-  const URL_EXCLUIR = "http://10.90.146.37/api/api/Usuario/ExcluirUsuario";
-  const URL_EDITAR = "http://10.90.146.37/api/api/Usuario/AtualizarPerfil";
+  const API_URL = "https://back-end-festa-junina.onrender.com/api/Usuario";
+  const URL_EXCLUIR = "https://back-end-festa-junina.onrender.com/api/Usuario/ExcluirUsuario";
+  const URL_EDITAR = "https://back-end-festa-junina.onrender.com/api/Usuario/AtualizarPerfil";
 
   const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado")) || {};
   const currentUserId = Number(usuarioLogado.id);

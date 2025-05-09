@@ -1,6 +1,6 @@
 
 
-const url = 'http://10.90.146.37/api/api/Lote/EditarLote'
+const url = 'https://back-end-festa-junina.onrender.com/api/Lote/EditarLote'
 
 
 let lotePronto = null;

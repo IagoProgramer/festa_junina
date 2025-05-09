@@ -22,7 +22,7 @@ function adicionarLote() {
     ativo: 1
   };
 
-  fetch("http://10.90.146.37/api/api/Lote/CadastrarLote", {
+  fetch("https://back-end-festa-junina.onrender.com/api/Lote/CadastrarLote", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

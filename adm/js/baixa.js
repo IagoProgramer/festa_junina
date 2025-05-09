@@ -1,6 +1,6 @@
 function alterarStatus(pedidoId, guid) {
   // Endpoints para alterar o status
-  const urlPedido = `http://10.90.146.37/api/api/Pedidos/AlterarStatus/${pedidoId}`;
+  const urlPedido = `https://back-end-festa-junina.onrender.com/api/Pedidos/AlterarStatus/${pedidoId}`;
 
   // Alteração do status do pedido
   const requestOptions = {
@@ -27,7 +27,7 @@ function alterarStatus(pedidoId, guid) {
 
       // Cria um array de promessas de requisições para alterar o status dos ingressos
       const ingressosPromises = ingressosComMesmoGuid.map(ingresso => {
-        return fetch(`http://10.90.146.37/api/api/Ingresso/AlterarStatus/${ingresso.id}`, requestOptions);
+        return fetch(`https://back-end-festa-junina.onrender.com/api/Ingresso/AlterarStatus/${ingresso.id}`, requestOptions);
       });
 
       // Executa todas as requisições de alteração de status de ingressos em paralelo
@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function carregarUsuarios() {
     // Executa as três requisições em paralelo
     Promise.all([
-      fetch('http://10.90.146.37/api/api/Pedidos').then(res => res.json()),
-      fetch('http://10.90.146.37/api/api/Ingresso').then(res => res.json()),
-      fetch('http://10.90.146.37/api/api/Usuario').then(res => res.json())
+      fetch('https://back-end-festa-junina.onrender.com/api/Pedidos').then(res => res.json()),
+      fetch('https://back-end-festa-junina.onrender.com/api/Ingresso').then(res => res.json()),
+      fetch('https://back-end-festa-junina.onrender.com/api/Usuario').then(res => res.json())
     ])
       .then(([pedidos, ingressos, usuarios]) => {
         // Mapeia os usuários por ID para acesso rápido

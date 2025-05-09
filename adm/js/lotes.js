@@ -20,7 +20,7 @@ function fecharModal() {
 // Função para confirmar a exclusão do lote
 function confirmarExclusao() {
   if (idParaExcluir) {
-    fetch(`http://10.90.146.37/api/api/Lote/DeletarLote/${idParaExcluir}`, {
+    fetch(`https://back-end-festa-junina.onrender.com/api/Lote/DeletarLote/${idParaExcluir}`, {
       method: "DELETE"
     })
       .then(response => {

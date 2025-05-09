@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
   
         try {
-          const resposta = await fetch("http://10.90.146.37/api/api/Perguntas", {
+          const resposta = await fetch("https://back-end-festa-junina.onrender.com/api/Perguntas", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

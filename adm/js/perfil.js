@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // envia PATCH para o servidor
       try {
-        const resp = await fetch(`http://10.90.146.37/api/api/Usuario${usuario.id}`, {
+        const resp = await fetch(`https://back-end-festa-junina.onrender.com/api/Usuario${usuario.id}`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const response = await fetch(
-        "http://10.90.146.37/api/api/Usuario/LoginUser",
+        "https://back-end-festa-junina.onrender.com/api/Usuario/LoginUser",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
