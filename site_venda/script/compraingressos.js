@@ -6,22 +6,22 @@ let ingressosRestantes = 0;
 
 // Função para carregar os lotes ativos e definir os preços
 function carregarLoteAtivo() {
-    const urlLote = 'http://10.90.146.37/api/api/Lote';
+    const urlLote = 'https://back-end-festa-junina.onrender.com/api/Lote';
     
+   
     fetch(urlLote)
         .then(response => response.json())
         .then(lotes => {
             const indexLoteAtivo = lotes.findIndex(lote => lote.ativo === 1);
             const loteElement = document.getElementById('lote-ativo');
             const ingressosRestantesElement = document.getElementById('ingressos-restantes');
-            
+
             if (indexLoteAtivo !== -1) {
                 const numeroLote = indexLoteAtivo + 1;
                 const loteAtivo = lotes[indexLoteAtivo];
-                
+
                 loteElement.textContent = `Lote ${numeroLote} - Selecione a sua opção...`;
-                
-                // Define os preços dos ingressos com base no lote ativo
+
                 precosIngressos = {
                     aluno: loteAtivo.valor_un,
                     comunidade: loteAtivo.valor_un,
@@ -30,13 +30,11 @@ function carregarLoteAtivo() {
                     infantil: loteAtivo.valor_un / 2
                 };
 
-                // Define a quantidade total de ingressos restantes
                 ingressosRestantes = loteAtivo.qtd_total || 0;
                 atualizarIngressosRestantes();
-                
-                atualizarPrecosFront();  // Atualiza os preços na interface
-                atualizarListaCarrinho();  // Recarrega a lista de itens no carrinho com os novos preços
-                atualizarTotal();  // Atualiza o total de preços no carrinho
+                atualizarPrecosFront();
+                atualizarListaCarrinho();
+                atualizarTotal();
             } else {
                 loteElement.textContent = 'Nenhum lote ativo no momento';
                 ingressosRestantesElement.textContent = 'Nenhum ingresso disponível';
@@ -47,25 +45,22 @@ function carregarLoteAtivo() {
         });
 }
 
-// Atualizar o lote periodicamente
-function atualizarLotePeriodicamente() {
-    setInterval(() => {
-        carregarLoteAtivo();  // Recarrega o lote ativo
-        // Aqui podemos chamar funções para atualizar o carrinho ou recalcular os totais conforme necessário
-    }, 10);  // Atualiza a cada 30 segundos
+// Atualiza os preços no front-end
+function atualizarPrecosFront() {
+    const tipos = ['aluno', 'comunidade', 'colaborador', 'familiar', 'infantil'];
+
+    tipos.forEach(tipo => {
+        const preco = precosIngressos[tipo] || 0;
+        const elementoPreco = document.getElementById(`preco-${tipo}`);
+        if (elementoPreco) {
+            elementoPreco.textContent = `R$ ${preco.toFixed(2)}`;
+        }
+    });
 }
 
-// Inicializa a página e começa a atualização periódica
-window.onload = function() {
-    carregarLoteAtivo();
-    atualizarLotePeriodicamente();  // Inicia a atualização periódica do lote ativo
-    adicionarCarrinho();  // Adiciona os itens do carrinho
-};
-
-
-// Atualizar o lote periodicamente
+// Atualiza o lote periodicamente
 function atualizarLotePeriodicamente() {
-    setInterval(carregarLoteAtivo, 30000);  // Atualiza a cada 30 segundos
+    setInterval(carregarLoteAtivo, 30000);  // a cada 30 segundos
 }
 
 // Função para alterar a quantidade de ingressos
@@ -73,31 +68,20 @@ function alterarQtd(item, incremento) {
     const qtdElement = document.getElementById(`qtd-${item}`);
     let qtdAtual = parseInt(qtdElement.textContent);
     let novaQtd = qtdAtual + incremento;
+    if (novaQtd < 0) novaQtd = 0;
 
-    if (novaQtd < 0) {
-        novaQtd = 0;
-    }
-
-    // Soma total de ingressos já selecionados (antes de alterar o atual)
     let totalSelecionado = 0;
     const tipos = ['aluno', 'comunidade', 'colaborador', 'familiar', 'infantil'];
-
     tipos.forEach(tipo => {
-        if (tipo === item) {
-            totalSelecionado += novaQtd;
-        } else {
-            const qtdTipo = parseInt(document.getElementById(`qtd-${tipo}`).textContent);
-            totalSelecionado += qtdTipo;
-        }
+        if (tipo === item) totalSelecionado += novaQtd;
+        else totalSelecionado += parseInt(document.getElementById(`qtd-${tipo}`).textContent);
     });
 
-    // Verifica se excede o limite total
     if (totalSelecionado > 5) {
-        alert("Você só pode selecionar no máximo 5 ingressos no total. Quando efetuado o pagamento será liberado a compra de mais");
+        alert("Você só pode selecionar no máximo 5 ingressos no total.");
         return;
     }
 
-    // Verifica se ainda há ingressos suficientes
     if (ingressosRestantes - (novaQtd - qtdAtual) < 0) {
         alert("Quantidade de ingressos restantes insuficiente.");
         return;
@@ -110,36 +94,30 @@ function alterarQtd(item, incremento) {
     atualizarTotal();
 }
 
-// Função para atualizar os itens no carrinho
+// Atualiza os itens no carrinho
 function atualizarItemCarrinho(item, quantidade) {
     if (quantidade > 0) {
         carrinhoItens[item] = quantidade;
-    } else if (carrinhoItens[item]) {
+    } else {
         delete carrinhoItens[item];
     }
 }
 
 // Atualiza a quantidade de ingressos restantes
 function atualizarIngressosRestantes() {
-    // Calcula a quantidade total selecionada no carrinho
     const totalSelecionado = Object.values(carrinhoItens).reduce((acc, qtd) => acc + qtd, 0);
     const ingressosRestantesElement = document.getElementById('ingressos-restantes');
     ingressosRestantesElement.textContent = ingressosRestantes - totalSelecionado;
 }
 
-// Função para adicionar itens ao carrinho
+// Adiciona itens ao carrinho com base nas quantidades atuais
 function adicionarCarrinho() {
-    const alunoQtd = parseInt(document.getElementById('qtd-aluno').textContent);
-    const comunidadeQtd = parseInt(document.getElementById('qtd-comunidade').textContent);
-    const colaboradorQtd = parseInt(document.getElementById('qtd-colaborador').textContent);
-    const familiarQtd = parseInt(document.getElementById('qtd-familiar').textContent);
-    const infantilQtd = parseInt(document.getElementById('qtd-infantil').textContent);
-
-    atualizarItemCarrinho('aluno', alunoQtd);
-    atualizarItemCarrinho('comunidade', comunidadeQtd);
-    atualizarItemCarrinho('colaborador', colaboradorQtd);
-    atualizarItemCarrinho('familiar', familiarQtd);
-    atualizarItemCarrinho('infantil', infantilQtd);
+    const tipos = ['aluno', 'comunidade', 'colaborador', 'familiar', 'infantil'];
+    qtdTipos = tipos.map(tipo => {
+        const qtd = parseInt(document.getElementById(`qtd-${tipo}`).textContent);
+        atualizarItemCarrinho(tipo, qtd);
+        return qtd;
+    });
 
     atualizarIngressosRestantes();
     atualizarListaCarrinho();
@@ -150,15 +128,16 @@ function adicionarCarrinho() {
 function atualizarListaCarrinho() {
     const listaCarrinho = document.getElementById('lista-carrinho');
     listaCarrinho.innerHTML = '';
+
     for (const item in carrinhoItens) {
-        let nomeItem;
-        switch (item) {
-            case 'aluno': nomeItem = 'Aluno'; break;
-            case 'comunidade': nomeItem = 'Comunidade'; break;
-            case 'colaborador': nomeItem = 'Colaborador'; break;
-            case 'familiar': nomeItem = 'Familiar'; break;
-            case 'infantil': nomeItem = 'Infantil (até 10 anos)'; break;
-        }
+        let nomeItem = {
+            aluno: 'Aluno',
+            comunidade: 'Comunidade',
+            colaborador: 'Colaborador',
+            familiar: 'Familiar',
+            infantil: 'Infantil (até 10 anos)'
+        }[item];
+
         const preco = precosIngressos[item] || 0;
         const li = document.createElement('li');
         li.innerHTML = `
@@ -171,7 +150,17 @@ function atualizarListaCarrinho() {
     }
 }
 
-// Atualiza o total de ingressos no carrinho
+// Remove item do carrinho
+function removerItem(item) {
+    const qtdElement = document.getElementById(`qtd-${item}`);
+    qtdElement.textContent = "00";
+    atualizarItemCarrinho(item, 0);
+    atualizarIngressosRestantes();
+    atualizarListaCarrinho();
+    atualizarTotal();
+}
+
+// Atualiza o total do carrinho
 function atualizarTotal() {
     let total = 0;
     for (const item in carrinhoItens) {
@@ -181,65 +170,91 @@ function atualizarTotal() {
     document.getElementById('total').textContent = total.toFixed(2);
 }
 
-function montarPedido(quantidadeTipos) {
-
-    quantidadeTipos = qtdTipos;
+// Monta e envia o pedido
+// Monta e envia o pedido
+function montarPedido() {
+    adicionarCarrinho(); // Garante que qtdTipos esteja atualizado
 
     const urlPedido = 'https://back-end-festa-junina.onrender.com/api/Ingresso/ReservaIngressos';
 
-    const emailLogado = localStorage.getItem("usuarioEmail");
-    const senhaLogado = localStorage.getItem("usuarioSenha");
-    const idLogado = localStorage.getItem("usuarioId");
-    console.log("id: " + idLogado, " - Email: " + emailLogado);
+    const tiposId = [5, 2, 1, 4, 3]; // ordem: aluno, comunidade, colaborador, familiar, infantil
 
-    const tiposId = [5, 2, 1, 4, 3];
+    // ✅ Verifica se o ID do usuário é válido
+    if (!idLogado || isNaN(parseInt(idLogado))) {
+        alert("Usuário não identificado corretamente. Faça login novamente.");
+        return;
+    }
+
+    const usuarioId = parseInt(idLogado);
+    const loteTexto = document.getElementById('lote-ativo').textContent;
+    const numeroLote = parseInt(loteTexto.match(/\d+/)?.[0]) || 1; // extrai número do lote
+    const loteId = numeroLote; // você pode alterar isso se tiver o lote_id exato de outro modo
 
     const pedidos = [];
 
-    quantidadeTipos.forEach((quantidade, index) => {
+    qtdTipos.forEach((quantidade, index) => {
         const tipoId = tiposId[index];
-
-        for (let i = 0; i < quantidade; i++)
-        {
+        for (let i = 0; i < quantidade; i++) {
             pedidos.push({
                 id: 0,
-                qrcode: "string",
-                data: "2025-05-06T11:32:12.597Z",
+                qrcode: "",
+                data: new Date().toISOString(),
                 tipo_ingresso_id: tipoId,
-                usuario_id: 1, // ou quem estiver logado
-                lote_id: 1,
+                usuario_id: usuarioId,
+                lote_id: loteId,
                 status_id: 0,
-                cliente_id: idLogado, // ✅ Vírgula adicionada aqui
-                guid: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+                cliente_id: usuarioId,
+                guid: crypto.randomUUID()
             });
         }
     });
+
+    if (pedidos.length === 0) {
+        alert("Selecione pelo menos um ingresso antes de finalizar a reserva.");
+        return;
+    }
 
     console.log("Pedido montado:", pedidos);
 
     fetch(urlPedido, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(pedidos)
-      })
-        .then(response => {
-            const statusOk = response.ok;
-            return response.json().then(data => ({ data, statusOk }));
-      })
-      .then(({ data, statusOk }) => {
-        console.log(data);
-        if (statusOk) {
-            alert("Usuário registrado com sucesso!");
-            console.log("Novo usuário:", data);
+    })
+    .then(async response => {
+        const statusOk = response.ok;
+        const contentType = response.headers.get("content-type");
+
+        let data;
+        if (contentType && contentType.includes("application/json")) {
+            data = await response.json();
+        } else {
+            data = await response.text(); // resposta em texto simples
         }
-    }); // ✅ Fechando corretamente com ponto e vírgula
+
+        return { data, statusOk };
+    })
+    .then(({ data, statusOk }) => {
+        console.log("Resposta da API:", data);
+        if (statusOk) {
+            alert("Ingressos reservados com sucesso!");
+            window.location.reload(); // se quiser resetar tudo após a compra
+        } else {
+            alert("Erro ao reservar ingressos: " + (typeof data === 'string' ? data : JSON.stringify(data)));
+        }
+    })
+    .catch(error => {
+        console.error("Erro na requisição:", error);
+        alert("Erro inesperado ao tentar reservar ingressos. Verifique sua conexão ou fale com o suporte.");
+    });
 }
 
-// Inicializa a página e começa a atualização periódica
-window.onload = function() {
+// Listener do botão de finalizar
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("botao_finalizar").addEventListener("click", montarPedido);
+
+    // Inicializa a página
     carregarLoteAtivo();
-    atualizarLotePeriodicamente();  // Inicia a atualização periódica do lote ativo
+    atualizarLotePeriodicamente();
     adicionarCarrinho();
-};
+});
