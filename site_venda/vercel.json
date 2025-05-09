@@ -1,30 +1,7 @@
 {
-  "builds": [
-    {
-      "src": "site_venda/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "adm/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "pesquisa/**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/adm/(.*)",
-      "dest": "/adm/$1"
-    },
-    {
-      "src": "/pesquisa/(.*)",
-      "dest": "/pesquisa/$1"
-    },
-    {
-      "src": "/",
-      "dest": "/site_venda/index.html"
-    }
+  "rewrites": [
+    { "source": "/adm", "destination": "/adm/index.html" },
+    { "source": "/pesquisa", "destination": "/pesquisa/index.html" },
+    { "source": "/", "destination": "/index.html" }
   ]
 }
