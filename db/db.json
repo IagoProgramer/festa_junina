@@ -1,0 +1,67 @@
+{
+  "usuario": [
+    {
+      "nome": "Javier Escuella",
+      "email": "javier.escuella@teste.com",
+      "senha": "123",
+      "telefone": "11999990001",
+      "id": "e0bc"
+    },
+    {
+      "nome": "Emanuel",
+      "email": "emanuelbentodeoliveira@gmai12l.com",
+      "senha": "999",
+      "telefone": "11999990002",
+      "id": "f1fe"
+    },
+    {
+      "nome": "Félix Gonzales",
+      "email": "felixgonzales@mexicano.com",
+      "senha": "123",
+      "telefone": "11999990003",
+      "id": "6430"
+    },
+    {
+      "nome": "Chincharito",
+      "email": "chincharito@guatemala.com",
+      "senha": "1234",
+      "telefone": "11999990004",
+      "id": "36c2"
+    },
+    {
+      "nome": "Juanito Cruz",
+      "email": "juanitocruz@bolivia.com",
+      "senha": "12345",
+      "telefone": "11999990005",
+      "id": "195e"
+    },
+    {
+      "nome": "Pablito Hernandez",
+      "email": "pablitohernandez@mexico.com",
+      "senha": "123456",
+      "telefone": "11999990006",
+      "id": "cb90"
+    },
+    {
+      "nome": "Emanuel",
+      "email": "emanuelbentodeoliveira@gmail.com",
+      "senha": "999",
+      "telefone": "11999990007",
+      "id": "44b9"
+    },
+    {
+      "nome": "lugano",
+      "email": "lugano@sccp.com",
+      "senha": "rogferioceni",
+      "telefone": "11999990008",
+      "id": "ac24"
+    },
+    {
+      "id": "6b30",
+      "nome": "brunicofps",
+      "email": "brunicogames@gmail.com",
+      "senha": "123",
+      "telefone": "1234"
+    }
+  ]
+}

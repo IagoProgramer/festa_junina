@@ -1,0 +1,35 @@
+{
+    "ingresso": [
+        {
+            "id": 1,
+            "tipo": "Aluno",
+            "codigo": 1,
+            "id_usuario": 1
+
+        },
+        {
+            "id": 2,
+            "tipo": "Comunidade",
+            "codigo": 2,
+            "id_usuario": 2
+        },
+        {
+            "id": 3,
+            "tipo": "Colaborador",
+            "codigo": 3,
+            "id_usuario": 3
+        },
+        {
+            "id": 4,
+            "tipo": "Familiar",
+            "codigo": 4,
+            "id_usuario": 4
+        },
+        {
+            "id": 5,
+            "tipo": "Infantil",
+            "codigo": 5,
+            "id_usuario": 5
+        }
+    ]
+}

@@ -1,0 +1,203 @@
+.faixa-vermelha {
+    background-color: #97080A; /* Cor vermelha */
+    padding: 20px;
+    font-weight: bold;
+    display: flex; /* Usar flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaçar os itens ao máximo */
+    align-items: center; /* Alinhar verticalmente ao centro */
+    border: 0px;
+}
+.faixa-branca {
+    background-color: #FFFFFF; /* Cor branca */
+    padding: 1px;
+    font-weight: bold;
+
+}
+
+.icone-esquerda {
+    max-width: 30px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.icone-direita {
+    max-width: 30px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+/* Restante dos seus estilos CSS (mantenha-os) */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #97080A;
+    color: #333;
+}
+
+header {
+    background-color: #ffffff; 
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #000; /* Cor do texto do título */
+}
+
+header img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;/*margem senai bai*/
+}
+
+h2 {
+    color: #000;
+    padding: 15px;
+    margin-bottom: 0px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-ingresso {
+    background-color: #E9E9C0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+}
+
+.card-topo {
+    background-color: #000000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-conteudo {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-conteudo p {
+    margin-bottom: 10px;
+}
+
+.card-conteudo img {
+    max-width: 150px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+
+.status {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.status.pendente {
+    color: black;
+}
+
+.status.concluido {
+    color: black;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.btns button {
+    background-color: #97080A;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btns button:hover {
+    background-color: #ccc;
+}
+
+.aviso {
+    font-style: italic;
+    color: #F23030;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+/* Estilo para o ícone ao lado de "Meus ingressos" */
+h2 {
+    color: #97080A;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex; /* Usar flexbox para alinhar a imagem e o texto */
+    align-items: center; /* Alinhar verticalmente */
+}
+
+h2 .icone-titulo {
+    max-width: 20px; /* Ajuste o tamanho da seta conforme necessário */
+    height: auto;
+    margin-right: 10px; /* Adiciona um espaço entre a seta e o texto */
+}
+
+
+.sup{
+    background-color: white;
+    height: 100px;
+    text-align: center;
+    
+  }
+    .contato{
+    font-size: 10px;
+    margin-top: 50px;
+  }
+    .cont{
+      font-size: 40px;
+    }
+    .sup1{
+    background-color: #97080A;
+    border-radius: 40px;
+    width: 170px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    border: none;
+  }
+    .rodape{
+    background-color: #97080A;
+    margin-bottom: 0;
+    margin-top: 30px;
+    height: 50px;
+    user-select: none;
+  }
+    .rod1{
+    color: #97080A;
+  }
+
+  .contato b{
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+
+@media(max-width:600px){
+    header{
+        display: flex;
+    }
+}

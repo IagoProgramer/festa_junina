@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu perfil</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kode+Mono:wght@400..700&family=Lexend:wght@100..900&family=Prata&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="../img/SENAI_São_Paulo_logo.png" class="senai">
+    </header>
+
+    <div class="cabecalho2">
+        <div class="menu-options" id="centro_menu">
+            <a href="../index.html"  id="none_border">Ínicio</a>
+            <a href="./compraingresso.html">Garanta seu ingresso</a>
+            <a href="./qrcode.html">Ver meus ingressos</a>
+            <a href="./mapa.html">Mapa Da Pagina</a>
+            <a href="./misscaipira.html">Miss Caipíra</a>
+            <a href="./cadastro.html">Cadastro</a>
+        </div>
+        <button><img src="../img/loguot.png" alt="logout" id="botao_logout" class="botao_logout"></button>
+    </div>
+
+    <div class="container-perfil">
+        <div class="container">
+            <h1 class="perfil">Perfil</h1>
+
+            <div class="dados">
+                <img src="../img/icone-utilisateur.png" class="foto-user">
+                <button id="editar-btn"> <img src="../img/edit.png" class="edit"> Editar</button>
+                <h1 id="username"></h1>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <h3><img src="../img/engrenagem.png" class="img-form"><i class="fa-solid fa-gear"></i> Informações Pessoais:</h3>
+            
+            <div class="info-item">
+                <i class="fa-solid fa-id-card"></i>
+                <img src="../img/cracha.png" class="img-form">
+                <span id="nome-completo">Nome completo</span>
+                <input type="text" id="input-nome" style="display:none;" value="Nome completo">
+            </div>
+        
+            <div class="info-item1">
+                <i class="fa-solid fa-phone"></i>
+                <img src="../img/telefone.png" class="img-form">
+                <span id="telefone">Telefone</span>
+                <input type="tel" id="input-telefone" style="display:none;" value="Telefone">
+            </div>
+        
+            <div class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <img src="../img/email.webp" class="img-form">
+                <span id="email">E-mail</span>
+                <input type="email" id="input-email" style="display:none;" value="E-mail">
+            </div>
+        
+            <div class="info-item1" id="info-item2">
+                <img src="../img/cadeado.png" class="img-form">
+                <span id="senha">Senha</span>
+                <input type="password" id="input-senha" style="display:none;" value="Senha">
+                <button><img src="../img/eye-close.png" alt="Esconder senha" class="eye" id="toggle-senha"></button>
+            </div>
+        
+            <button class="btn-editar" id="btn-editar-dados">
+                <img src="../img/edit.png" class="edit" id="editar-imagem"> Editar
+            </button>
+        </div>
+    </div>
+
+    <div class="sup">
+        <div class="contato">
+          <h1 class="cont"><b>Algum problema? Entre em contato conosco!</b></h1>
+          <a
+            href="https://api.whatsapp.com/send?phone=551432693977&text=Ol%C3%A1,%20tenho%20uma%20d%C3%BAvida%20sobre%20a%20festa"
+            target="_blank"
+          >
+            <button class="sup1"><b>SUPORTE</b></button>
+          </a>
+        </div>
+        
+        <div class="rodape">
+        </div>
+    </div>
+
+    <script src="../script/entrada.js"></script>
+    <script src="../script/menu.js"></script>
+</body>
+</html>
+
+

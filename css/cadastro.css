@@ -1,0 +1,356 @@
+/* Cabeçalho Geral */
+header {
+  width: 100%; 
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Faixa Superior: Centraliza a logo */
+.top-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.logo {
+  height: 50px; /* Ajuste conforme necessário */
+  object-fit: contain;
+}
+
+/* Faixa Inferior: Barra vermelha com ícones */
+.bottom-bar {
+  background-color: #97080A;  /* Tom de vermelho conforme a identidade visual */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  height: 20px;
+}
+
+/* Ícones em geral (Home + User) */
+.icon {
+  color: white;        /* Cor do ícone */
+  font-size: 22px;     /* Tamanho */
+  text-decoration: none;
+  transition: opacity 0.2s ease-in;
+  margin: 0 8px;
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
+
+.icon-user i {
+  font-size: 28px; /* Deixe maior se quiser realçar */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Jost", sans-serif;
+  background: linear-gradient(
+      rgba(255, 0, 0, 0.5),
+      rgba(171, 45, 45, 0.5)
+    ),
+}
+
+.cabecario {
+  background-color: #ff0000;
+  width: 120%;
+}
+
+.txt1 {
+  padding-bottom: 30px;
+  margin: 160px auto 0;  /* Centralizado horizontalmente com margem automática */
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Caixa principal (.main) com dimensões fixas e efeito de escala para responsividade */
+.main {
+  width: 800px;
+  height: 600px;
+  background: #97080A;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+  transform-origin: top center;
+  margin: 20px auto;  /* Centralizado horizontalmente com margin auto */
+}
+
+/* Oculta o checkbox que serve para alternar entre os formulários */
+#chk {
+  display: none;
+}
+
+/* Formulário de cadastro */
+.signup {
+  position: relative;
+  width: 100%;
+  height: 110%;
+}
+
+/* Rótulo dos formulários */
+label {
+  color: #fff;
+  font-size: 2.3em;
+  display: flex;
+  justify-content: center;
+  margin: 45px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+/* Estilos dos inputs */
+input {
+  width: 60%;
+  height: 10px;
+  background: #e0dede;
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+/* Botão de cadastro */
+.cadastro {
+  width: 60%;
+  height: 40px;
+  display: block;
+  margin: 10px auto; /* Mantém as margens laterais e inferior inalteradas */
+  margin-top: 2px;   /* Reduz o margin-top para subir o botão */
+  color: #97080A;
+  background: #fefefe;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+#registerForm{
+  margin-top: -20px;
+}
+/* Estilização da caixa "Lembrar deste dispositivo" */
+/* O container abaixo alinha o checkbox e o label à direita */
+      /* Estilização para alinhar horizontalmente o checkbox e o texto */
+      .remember-container {
+        display: grid;
+        grid-column: 1fr 1fr;
+        
+      }
+      .remember-container label {
+        font-size: 0.8em;
+        grid-column: sapn 2;
+        margin-left: -850px;
+        margin-top: -10px;  /* Impede quebra de linha */   /* Aproxima o texto da caixa */
+      }
+      .remember-container input{
+        margin-top: -10px;
+        margin-right: 320px;
+        width: 15px;
+        height: 15px;
+      }
+      .forgot-password {
+        text-align: left;
+        width: 60%;
+        margin: -5px auto 10px auto; /* Ajusta a posição abaixo da senha */
+      }
+      
+      .forgot-password a {
+        font-size: 0.8em;
+        color: #007bff;
+        text-decoration: none;
+      }
+      
+      .forgot-password a:hover {
+        text-decoration: underline;
+      }
+      
+
+
+.entrar {
+  width: 60%;
+  height: 40px;
+  display: block;
+  margin: 10px auto;
+  color: hsl(0, 0%, 100%);
+  background: #97080A;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 30px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+#loginForm{
+  margin-top: 30px;
+}
+.cadastro:hover {
+  background: rgb(233, 0, 0);
+  color: #ffffff;
+}
+
+.entrar:hover {
+  background: rgb(233, 0, 0);
+}
+
+/* Caixa de login (painel) */
+.login {
+  height: 120%;
+  background: #eee;
+  transform: translateY(-170px);
+  transition: 0.8s ease-in-out;
+  padding: 10px;
+  margin-top:-50px;
+  border-radius: 150px;
+}
+
+
+.login label {
+  text-size-adjust: 50px;
+  color: #97080A;
+  transform: scale(0.6);
+}
+
+/* Alternância de estados via checkbox */
+#chk:checked ~ .login {
+  tab-size: 25px;
+  transform: translateY(-550px);
+}
+
+#chk:checked ~ .login label {
+  transform: scale(1);
+}
+
+#chk:checked ~ .signup label {
+  transform: scale(0.6);
+}
+
+.lembrar{
+  margin-left: 10px;
+}
+
+.forgot-btn{
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #97080A;
+}
+
+.remember-container{
+  margin-top: 25px;
+}
+
+
+  /* Rodape */
+
+.sup{
+  background-color: white;
+  height: 100px;
+  text-align: center;
+}
+  .contato{
+  font-size: 10px;
+  margin-top: 100px;
+}
+
+  .contato b{
+    font-size: 30px;
+  }
+
+  .cont{
+    font-size: 40px;
+  }
+  .sup1{
+  background-color: #97080A;
+  border-radius: 40px;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 30px;
+  color: white;
+  border: none;
+}
+  .rodape{
+  background-color: #97080A;
+  margin-bottom: 0;
+  margin-top: 30px;
+  height: 50px;
+  user-select: none;
+}
+  .rod1{
+  color: #97080A;
+}
+
+
+/* Responsividade: ajuste o tamanho visual da caixa sem alterar seu formato */
+@media (max-width: 500px) {
+  .main {
+    transform: scale(0.5);
+    margin-left: -185px
+    
+  }
+  .sup{
+    transform: scale(0.5);
+    margin-left: -185px;
+    margin-top: -100px;
+    width: 300px;
+
+
+}
+  .txt1 {
+    font-size: 1.5em;
+    margin-left: -185px;
+    
+  }
+  .cabecario {
+    margin-left: -185px;
+    width: 300px;
+    height: 100px;
+  }
+  .cont{
+    margin-left: -185px;
+    width: 300px;
+    font-size: 30px;
+
+
+  }
+  .rodape{
+    margin-left: -185px;
+    width: 300px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: white;
+  }
+  .rod1{
+    font-size: 15px;
+    color: white;
+    margin-left: -185px;
+    
+  }
+
+
+}
+
+
+
+
+
+  
+
+
+
+
+
+

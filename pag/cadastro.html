@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/menu.css">
+    <title>Cadastro/Login Festa Junina</title>
+  </head>
+
+  <body> 
+    <header>
+      <div class="top-header">
+        <img src="../img/SENAI_São_Paulo_logo.png" alt="SENAI Logo" class="logo" />
+      </div>
+      <div class="menu-container">
+        <img src="../img/menu.png" class="icone_menu" id="menu">
+        <div class="menu-options2" id="menu-options2">
+          <a href="../index.html"  id="none_border">Ínicio</a>
+        <a href="./compraingresso.html">Garanta seu ingresso</a>
+        <a href="./qrcode.html">Ver meus ingressos</a>
+        <a href="./mapa.html">Mapa Da Pagina</a>
+        <a href="./misscaipira.html">Miss Caipíra</a>
+        <a href="./cadastro.html">Cadastro</a>
+        </div>
+      </div> 
+      <div class="bottom-bar">
+        <div class="menu-options" id="centro_menu">
+          <a href="../index.html"  id="none_border">Ínicio</a>
+          <a href="./compraingresso.html">Garanta seu ingresso</a>
+          <a href="./qrcode.html">Ver meus ingressos</a>
+          <a href="./mapa.html">Mapa Da Pagina</a>
+          <a href="./misscaipira.html">Miss Caipíra</a>
+          <a href="./cadastro.html">Cadastro</a>
+        </div>
+        <a href="#" class="icon icon-user">
+          <i class="far fa-user-circle"></i>
+        </a>
+      </div>
+    </header>
+    
+    <div class="txt1">Preencha os dados solicitados para se cadastrar.</div>
+    
+    <div class="main">
+      <!-- Alternância entre login/cadastro -->
+      <input type="checkbox" id="chk" aria-hidden="true" />
+      
+      <!-- Formulário de Cadastro -->
+      <div class="signup">
+        <form id="registerForm">
+          <label for="chk" aria-hidden="true">Cadastro</label>
+          <input type="text" id="nome" placeholder="Nome de usuário" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="password" id="senha" placeholder="Senha" required />
+          <input type="password" id="confirmSenha" placeholder="Confirmar senha" required />
+          <input type="tel" id="telefone" placeholder="Telefone" required />  
+
+          
+
+          <button class="cadastro" type="submit">Cadastrar-se</button>
+        </form>
+      </div>
+
+      <!-- Formulário de Login -->
+      <div class="login" id="sobe">
+        <form id="loginForm">
+          <label for="chk" aria-hidden="true">Entrar na conta</label>
+          <input type="email" id="loginEmail" placeholder="Email" required />
+          <input type="password" id="loginSenha" placeholder="Senha" required />
+
+          <!-- Lembre de mim CORRIGIDO -->
+          <div class="remember-container">
+              <input type="checkbox" id="lembrarUsuario" />
+              <label class="lembrardemim" for="lembrarUsuario"> ​  ​  ​  ​ Lembre de mim neste dispositivo</label>
+          </div>
+
+          <div class="forgot-password">
+            <button type="button" id="esqueciSenha" class="forgot-btn">Esqueceu a senha?</button>
+          </div>
+
+          <button type="submit" class="entrar">Entrar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="sup">
+      <div class="contato">
+        <h1 class="cont"><b>Algum problema? Entre em contato conosco!</b></h1>
+        <a
+          href="https://api.whatsapp.com/send?phone=551432693977&text=Ol%C3%A1,%20tenho%20uma%20d%C3%BAvida%20sobre%20a%20festa"
+          target="_blank"
+        >
+          <button class="sup1"><b>SUPORTE</b></button>
+        </a>
+      </div>
+      
+      <div class="rodape">
+      </div>
+    </div>
+
+    <script src="../script/entrada.js"></script>
+    <script src="../script/menu.js"></script>
+  </body>
+</html>
