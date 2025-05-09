@@ -100,13 +100,24 @@ background-color: white;
 text-align: center;
 height: 370px;
 }
+
+.bemvindo h1{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cont b{
+  font-weight: 400;
+}
+
 .t1{
-font-size: 50px;
+font-size: 40px;
 color: #97080A;
 }
 .cdp{
 font-size: 30px;
 color: black;
+font-weight: 200;
 }
 .bot1{
 border-radius: 50px;
@@ -151,20 +162,21 @@ color: white;
   }
 
 .noite{
-text-align: center;
-color: white;
-background-color: #97080A;
-height: 420px;
+  text-align: center;
+  color: white;
+  background-color: #97080A;
+  height: 520px;
 }
+
 .subtitulo{
 font-size: 50px;
 }
 .container_texto{
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 20px;
+gap: 50px;
 padding: 20px;
-
+margin-top: 60px;
 }
 .texto{
   display: flex;
@@ -172,8 +184,6 @@ padding: 20px;
   flex-direction: row;
   font-size: 10px;
   text-align: left;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 
@@ -185,12 +195,7 @@ padding: 20px;
   text-align: left;
   margin-bottom: -150px;
 }
-.img2{
-  margin-left: 120px;
-}
-.img3{
-  margin-left: 70px;
-}
+
   #centro{
   grid-column: span 2;
   justify-content: center;
@@ -198,9 +203,9 @@ padding: 20px;
 }
   .texto img{
   object-fit: cover;
-  margin-left: 10px;
-  width: 70px;
-  height: 70px;
+  margin-left: 0px;
+  width: 50px;
+  height: 50px;
 }
   .sup{
   background-color: white;
@@ -247,11 +252,17 @@ padding: 20px;
   .t6{
     font-size: 29px;
     margin-left: 20px;
-    margin-right: 220px;
+    margin-right: 0px;
   }
   .t7{
     font-size: 35px;
   }
+
+
+
+      /* RESPONSIVIDADE */
+
+
   @media(max-width: 430px){
     .btn-cadastro {
       background: none;

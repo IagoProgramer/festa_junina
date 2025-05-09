@@ -7,24 +7,27 @@
   <link rel="stylesheet" href="../css/cabecalho.css">
 </head>
 <body>
-  <div class="top-bar">
-    <img src="../images/SENAI_São_Paulo_logo.png" alt="Logo SENAI" class="logo" />
-   
-  </div>
-  
-  <!-- Faixa vermelha: menu centralizado -->
-  <header class="navbar">
-    <nav>
-      <a href="../views/home.html">Início</a> |
-      <a href="../views/lotes.html">Gerenciar Lotes</a> |
-      <a href="../views/gerenciamento.html">Gerenciar Festa</a> |
-      <a href="../views/baixa.html">Gerenciar Pagamentos</a> |
-      <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
-      <a href="../views/perfil.html">
-        <img src="../images/icon.png" alt="Perfil" class="perfil-icon" />
-      </a>
-    </nav>
-  </header>
+ <!-- Faixa branca: logo + ícone de perfil -->
+<div class="top-bar">
+  <img src="../images/SENAI_São_Paulo_logo.png" alt="Logo SENAI" class="logo" />
+ 
+</div>
+
+<!-- Faixa vermelha: menu centralizado -->
+<header class="navbar">
+  <nav>
+    <a href="../views/home.html">Início</a> |
+    <a href="../views/lotes.html">Gerenciar Lotes</a> |
+    <a href="../views/gerenciamento.html">Gerenciar Festa</a> |
+    <a href="../views/baixa.html">Gerenciar Pagamentos</a> |
+    <a href="../criarsenha.html">Cadastro</a>
+    <a href="../views/perfil.html">
+      <img src="../images/icon.png" alt="Perfil" class="perfil-icon" />
+    </a>
+  </nav>
+</header>
+
+
   <a href="../views/lotes.html" class="voltar-lotes">
     <img src="../images/seta.png" alt="Voltar" class="icone-voltar">
   </a>
@@ -44,27 +47,14 @@
       <input type="number" id="quantidade" placeholder="250">
 
       <div class="botoes">
-        <button class="concluir" onclick="concluir()">CONCLUIR</button>
+        <button class="concluir" onclick="concluir()">ADICIONAR</button>
         <button class="cancelar" onclick="cancelar()">CANCELAR</button>
       </div>
     </div>
-
-    <table class="tabela-lotes">
-      <thead>
-        <tr>
-          <th>Valor</th>
-          <th>Valor Infantil</th>
-          <th>Abertura</th>
-          <th>Fechamento</th>
-          <th>Quantidade</th>
-        </tr>
-      </thead>
-      <tbody id="tabela-corpo">
-        <!-- Itens adicionados aqui via JS -->
-      </tbody>
-    </table>
-
-    <button class="adicionar" onclick="adicionarLote()">ADICIONAR</button>
+    <div class="card-lote" data-lote-id="123">
+      <!-- conteúdo do lote -->
+    </div>
+    
   </main>
 
   <script src="../js/adicionarlote.js"></script>

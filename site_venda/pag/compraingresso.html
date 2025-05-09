@@ -46,51 +46,51 @@
             <p>Preencha os dados requisitados e realize o pagamento.</p>
             <g>
                 <img src="../img/alerta.png" alt="Alerta" class="icone-alerta">
-                Lembre-se: os lotes esgotam! 
-                </g>    
-            </p>
-        </div>
+                Ingressos restantes: <span id="ingressos-restantes">Carregando...</span>
+            </g>    
+        </div>        
+        
      
         <div class="container">
             <section class="opcoes">              
-                <option value="">LOTE 1 - Selecione a sua opção...</option>
-
+                <div id="lote-ativo" style="font-size: 20px; font-style: italic; color: red;">Carregando lote...</div>
+                <br> 
                 <div class="item-1">
-                    <span>Aluno R$10,00</span>
+                    <span>Aluno</span>
                     <button onclick="alterarQtd('aluno', -1)">-</button>
                     <span id="qtd-aluno">00</span>
                     <button onclick="alterarQtd('aluno', 1)">+</button>
                 </div>
 
                 <div class="item-2">
-                    <span>Comunidade R$10,00</span>
+                    <span>Comunidade</span>
                     <button onclick="alterarQtd('comunidade', -1)">-</button>
                     <span id="qtd-comunidade">00</span>
                     <button onclick="alterarQtd('comunidade', 1)">+</button>
                 </div>
 
                 <div class="item-3">
-                    <span>Colaborador R$10,00</span>
+                    <span>Colaborador</span>
                     <button onclick="alterarQtd('colaborador', -1)">-</button>
                     <span id="qtd-colaborador">00</span>
                     <button onclick="alterarQtd('colaborador', 1)">+</button>
                 </div>
 
                 <div class="item-4">
-                    <span>Familiar R$10,00</span>
+                    <span>Familiar</span>
                     <button onclick="alterarQtd('familiar', -1)">-</button>
                     <span id="qtd-familiar">00</span>
                     <button onclick="alterarQtd('familiar', 1)">+</button>
                 </div>
 
                 <div class="item-5">
-                    <span>Infantil (até 10 anos) R$5,00</span>
+                    <span>Infantil (até 10 anos)</span>
                     <button onclick="alterarQtd('infantil', -1)">-</button>
                     <span id="qtd-infantil">00</span>
                     <button onclick="alterarQtd('infantil', 1)">+</button>
                 </div>
                  
-
+                <br>
                 <button class="btn-add" onclick="adicionarCarrinho()">
                     <img src="../img/carrinho.png" alt="Carrinho" class="icone-carrinho-add">
                     Adicionar ao Carrinho
@@ -118,6 +118,21 @@
             </section>
         </div>
     </main>
+
+    <div class="sup">
+        <div class="contato">
+          <h1 class="cont"><b>Algum problema? Entre em contato conosco!</b></h1>
+          <a
+            href="https://api.whatsapp.com/send?phone=551432693977&text=Ol%C3%A1,%20tenho%20uma%20d%C3%BAvida%20sobre%20a%20festa"
+            target="_blank"
+          >
+            <button class="sup1"><b>SUPORTE</b></button>
+          </a>
+        </div>
+        
+        <div class="rodape">
+        </div>
+    </div>
 
     <script src="../script/compraingressos.js"></script>
     <script src="../script/entrada.js"></script>

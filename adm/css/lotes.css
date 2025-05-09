@@ -233,3 +233,9 @@ button.confirmar:hover {
 button.cancelar:hover {
   background-color: #bbbbbb;
 }
+.lote-destaque {
+  border: 3px solid #28a745;
+  background-color: #e6f9ec;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}

@@ -3,21 +3,15 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
-} 
+}
+
 .perfil {
   position: absolute;
   right: 24px;
-  top: 10px; /* Ajuste para deixá-lo mais alto */
+  top: 10px;
   height: 60px;
   width: 60px;
   color: #ffffff;
-}
-
-
-.txt{
-    text-align: center;
-    margin-top: 100px ;
-    font-size: 25px;
 }
 
 :root {
@@ -27,15 +21,15 @@ body {
 
 .fundo1 {
   background-color: var(--fj-red);
-  padding: 40px 0; /* reduzi padding para centralizar melhor */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 40px 0;
+  margin-top: 30px;
+  width: 100%;
 }
 
 .fundo_container {
   width: 90%;
   max-width: 1000px;
+  margin: 0 auto;
 }
 
 .img {
@@ -44,86 +38,75 @@ body {
   max-height: 520px;
   border-radius: 16px;
   object-fit: cover;
+  display: block;
 }
 
+.red-hero {
+  padding: 40px 0 40px;
+}
 
-  .red-hero {
-    padding: 20px 0 40px;
-  }
-  
-  .red-hero__container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-  
-  .red-hero__img {
-    display: block;
-    width: 100%;
-    border-radius: 8px;
-  }
-  
+.red-hero__container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.red-hero__img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.red-hero__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  max-width: 800px;
+  margin: 20px auto 0;
+  padding: 0 16px;
+}
+
+.red-hero__btn {
+  background-color: var(--fj-red);
+  color: var(--fj-white);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s;
+}
+
+.red-hero__btn:hover {
+  background-color: #d10000;
+}
+
+.red-hero__btn--wide {
+  width: 220px;
+}
+
+@media (max-width: 600px) {
   .red-hero__buttons {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    max-width: 800px;
-    margin: 20px auto 0;
-    padding: 0 16px;
+    flex-direction: column;
   }
-  
-  .red-hero__buttons--center {
-    margin-top: 30px;
-  }
-  
-  .red-hero__btn {
-    background-color: var(--fj-red);
-    color: var(--fj-white);
-    border: none;
-    padding: 14px 28px;
-    border-radius: 28px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: background-color 0.2s;
-  }
-  
-  .red-hero__btn:hover {
-    background-color: #d10000;
-  }
-  
+  .red-hero__btn,
   .red-hero__btn--wide {
-    width: 220px;
-  }
-
-  @media (max-width: 600px) {
-    .red-hero__buttons {
-      flex-direction: column;
-    }
-    .red-hero__btn,
-    .red-hero__btn--wide {
-      width: 100%;
-    }
-  }
-  
-
-  :root {
-    --fj-red:    #97080A;
-    --fj-white:  #ffffff;
-  }
-
-  .red-footer {
     width: 100%;
-    height: 40px;           
-    background-color: var(--fj-red);
-    margin-top: 165px;
   }
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
 }
-  
+
+.red-footer {
+  width: 100%;
+  height: 40px;
+  background-color: var(--fj-red);
+  margin-top: 100px;
+}
+.txt {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 24px;
+  font-family: Arial, sans-serif;
+}

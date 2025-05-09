@@ -377,6 +377,46 @@ select {
     height: 20px; /* Ajuste a altura conforme necessário */
     filter: invert(100%) brightness(200%); /* Inverte as cores e aumenta o brilho */
 }
+
+.sup{
+    background-color: white;
+    height: 100px;
+    text-align: center;
+    
+  }
+    .contato{
+    font-size: 10px;
+    margin-top: 50px;
+  }
+    .cont{
+      font-size: 40px;
+    }
+    .sup1{
+    background-color: #97080A;
+    border-radius: 40px;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 30px;
+    color: white;
+    border: none;
+  }
+    .rodape{
+    background-color: #97080A;
+    margin-bottom: 0;
+    margin-top: 30px;
+    height: 50px;
+    user-select: none;
+  }
+    .rod1{
+    color: #97080A;
+  }
+
+  .contato b{
+    font-size: 30px;
+  }
+  
+
 @media(max-width: 600px){
     header{
         display: flex;

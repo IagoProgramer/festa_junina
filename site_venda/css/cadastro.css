@@ -239,10 +239,118 @@ input {
 .lembrar{
   margin-left: 10px;
 }
+
+.forgot-btn{
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #97080A;
+}
+
+.remember-container{
+  margin-top: 25px;
+}
+
+
+  /* Rodape */
+
+.sup{
+  background-color: white;
+  height: 100px;
+  text-align: center;
+}
+  .contato{
+  font-size: 10px;
+  margin-top: 100px;
+}
+
+  .contato b{
+    font-size: 30px;
+  }
+
+  .cont{
+    font-size: 40px;
+  }
+  .sup1{
+  background-color: #97080A;
+  border-radius: 40px;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 30px;
+  color: white;
+  border: none;
+}
+  .rodape{
+  background-color: #97080A;
+  margin-bottom: 0;
+  margin-top: 30px;
+  height: 50px;
+  user-select: none;
+}
+  .rod1{
+  color: #97080A;
+}
+
+
 /* Responsividade: ajuste o tamanho visual da caixa sem alterar seu formato */
-@media (max-width: 430px) {
+@media (max-width: 500px) {
   .main {
     transform: scale(0.5);
-    margin-left: -185px;
+    margin-left: -185px
+    
   }
+  .sup{
+    transform: scale(0.5);
+    margin-left: -185px;
+    margin-top: -100px;
+    width: 300px;
+
+
 }
+  .txt1 {
+    font-size: 1.5em;
+    margin-left: -185px;
+    
+  }
+  .cabecario {
+    margin-left: -185px;
+    width: 300px;
+    height: 100px;
+  }
+  .cont{
+    margin-left: -185px;
+    width: 300px;
+    font-size: 30px;
+
+
+  }
+  .rodape{
+    margin-left: -185px;
+    width: 300px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: white;
+  }
+  .rod1{
+    font-size: 15px;
+    color: white;
+    margin-left: -185px;
+    
+  }
+
+
+}
+
+
+
+
+
+  
+
+
+
+
+
+

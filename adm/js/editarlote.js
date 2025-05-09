@@ -1,6 +1,6 @@
 
 
-const url = 'http://10.90.146.37/api/api/Lote/CadastrarLote'
+const url = 'http://10.90.146.37/api/api/Lote/EditarLote'
 
 
 let lotePronto = null;

@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const nomeUsuario = (localStorage.getItem("nomeUsuario") || "").trim().toLowerCase();
+
+  if (nomeUsuario !== "roberto") {
+    alert("Acesso restrito! Somente o usuário 'roberto' pode acessar esta página.");
+    window.location.href = "../index.html"; // redireciona para a home ou login
+  }
+});
+
 document.getElementById("adminForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -6,7 +15,7 @@ document.getElementById("adminForm").addEventListener("submit", function (e) {
   const senha = e.target.senha.value;
   const confirmaSenha = e.target.confirmaSenha.value;
   const telefone = e.target.telefone.value.trim();
-
+  
   if (!nome || !email || !telefone || !senha || !confirmaSenha) {
     alert("Preencha todos os campos.");
     return;
