@@ -1,7 +1,7 @@
 {
   "rewrites": [
     { "source": "/adm", "destination": "/adm/index.html" },
-    { "source": "/pesquisa", "destination": "/pesquisa/pesquisa.html" },
+    { "source": "/pesquisa", "destination": "/pesquisa/index.html" },
     { "source": "/", "destination": "/index.html" }
   ]
 }
