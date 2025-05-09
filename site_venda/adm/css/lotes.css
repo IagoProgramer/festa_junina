@@ -1,0 +1,241 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+.banner-topo {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 10px;
+}
+
+.logo-senai {
+  height: 40px;
+}
+
+.cabecalho-lotes {
+  background-color: #800000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  color: white;
+}
+
+.cabecalho-lotes img {
+  height: 24px;
+}
+
+.titulo-cabecalho {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.criar-lote {
+  background-color: #d00000;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  float: right;
+  margin-bottom: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.lote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b80000;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+
+.lote h2 {
+  flex: 1 1 200px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+}
+
+.acoes {
+  display: flex;
+  flex: 3;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.acoes button {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+button.editar {
+  background-color: #ff8a80;
+  color: white;
+}
+
+button.excluir {
+  background-color: #8b0000;
+  color: white;
+}
+a.editar {
+  background-color: #ff8a80;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+a.editar:hover {
+  background-color: #ff6e6e;
+}
+
+
+.info,
+.status-text {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 20px;
+  flex: 1;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-left: auto;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+  border-radius: 34px;
+  transition: .4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #00c853;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.modal-content p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.botoes-modal {
+  display: flex;
+  justify-content: center;
+  gap: 250px;
+  margin-top: 30px;
+}
+
+.botoes-modal button {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.confirmar {
+  background-color: #b80000;
+  color: white;
+}
+
+button.cancelar {
+  background-color: #ccc;
+  color: #333;
+}
+
+button.confirmar:hover {
+  background-color: #a00000;
+}
+
+button.cancelar:hover {
+  background-color: #bbbbbb;
+}
+.lote-destaque {
+  border: 3px solid #28a745;
+  background-color: #e6f9ec;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório de Pesquisa</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="../css/pesquisa.css">
+  <link rel="stylesheet" href="../css/cabecalho.css">
+</head>
+<body>
+   <div class="top-bar">
+      <img src="../images/SENAI_São_Paulo_logo.png" alt="Logo SENAI" class="logo" />
+     
+    </div>
+    
+    <!-- Faixa vermelha: menu centralizado -->
+    <header class="navbar">
+      <nav>
+        <a href="../views/home.html">Início</a> |
+        <a href="../views/lotes.html">Gerenciar Lotes</a> |
+        <a href="../views/gerenciamento.html">Gerenciar Festa</a> |
+        <a href="../views/baixa.html">Gerenciar Pagamentos</a> |
+        <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
+        <a href="../views/perfil.html">
+          <img src="../images/icon.png" alt="Perfil" class="perfil-icon" />
+        </a>
+      </nav>
+    </header>
+
+  <section class="respostas">
+    <div class="respostas-box">
+      <p>QUANTIDADE DE RESPOSTAS</p>
+      <h2>600</h2>
+    </div>
+  </section>
+
+  <section class="legenda">
+    <h3>Considere:</h3>
+    <ul>
+      <li class="otimo">ÓTIMO</li>
+      <li class="bom">BOM</li>
+      <li class="regular">REGULAR</li>
+      <li class="ruim">RUIM</li>
+      <li class="pessimo">PÉSSIMO</li>
+    </ul>
+  </section>
+
+  <main id="graficos">
+    <!-- Os gráficos serão inseridos aqui pelo JS -->
+  </main>
+
+  <section class="comentarios">
+    <h2>COMENTÁRIOS OPCIONAIS</h2>
+    <div class="comentarios-lista" id="comentarios-lista"></div>
+  </section>
+
+  <script src="../js/pesquisa.js"></script>
+</body>
+</html>

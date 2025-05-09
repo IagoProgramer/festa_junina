@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENAI - Gráficos de Ingressos</title>
+  <link rel="stylesheet" href="../css/cabecalho.css">
+  <link rel="stylesheet" href="../css/grafico.css">
+</head>
+<body>
+  <div class="top-bar">
+    <img src="../images/SENAI_São_Paulo_logo.png" alt="Logo SENAI" class="logo" />
+   
+  </div>
+  
+  <!-- Faixa vermelha: menu centralizado -->
+  <header class="navbar">
+    <nav>
+      <a href="../views/home.html">Início</a> |
+      <a href="../views/lotes.html">Gerenciar Lotes</a> |
+      <a href="../views/gerenciamento.html">Gerenciar Festa</a> |
+      <a href="../views/baixa.html">Gerenciar Pagamentos</a> |
+      <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
+      <a href="../views/perfil.html">
+        <img src="../images/icon.png" alt="Perfil" class="perfil-icon" />
+      </a>
+    </nav>
+  </header>
+  <main>
+    <div class="botoes-topo">
+      <button class="ativo">VENDIDOS</button>
+      <input type="date" id="filtroData">
+      <button>GRÁFICOS DOS INGRESSOS</button>
+    </div>
+
+    <div class="conteudo">
+      <div class="info-vendas">
+        <p>Alunos: 90 ingressos</p>
+        <p>Familiares: 50 ingressos</p>
+        <p>Infantil: 30 ingressos</p>
+        <p>Colaboradores: 50 ingressos</p>
+        <p>Comunidade: 100 ingressos</p>
+        <p><strong>TOTAL: 320 ingressos</strong></p>
+      </div>
+
+      <div>
+        <canvas id="grafico" width="400" height="400"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/grafico.js"></script>
+</body>
+</html>

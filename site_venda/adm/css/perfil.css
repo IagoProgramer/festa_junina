@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: white;
+  }
+  
+  
+  header {
+    background-color: white;
+    width: 100%;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #home {
+    width: 58px;
+  }
+  
+  .container-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 40px;
+  }
+  
+  .dados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .foto-user {
+    width: 220px;
+  }
+  
+  #editar-btn {
+    background-color: #97080A;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+  }
+  
+  #editar-btn:hover {
+    background-color: #a60000;
+  }
+  
+  .edit {
+    width: 16px;
+    height: 16px;
+  }
+  
+  #username {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  .info-container {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .info-container h3 {
+    background-color: #d3d3d3;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .info-item,
+  .info-item1 {
+    background-color: #d9d9d9;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .info-item1 {
+    background-color: #bab9b9;
+  }
+  
+  #info-item2 {
+    justify-content: space-between;
+  }
+  
+  .img-form {
+    width: 30px;
+  }
+  
+  .eye {
+    width: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-editar {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  input {
+    background: none;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    display: none;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+
+  
+
+  .hidden {
+    display: none;
+  }
+  .btn-ver-senha {
+    background: none;
+    border: none;
+    color: #0057b8;        /* Azul SENAI */
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  .botao-logout {
+    background-color: #d62828;
+    color: white;
+    border: none;
+    width: 58px;
+    height: 58px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-right: 10px; /* Move um pouco para a esquerda */
+  }
+  
+  .botao-logout:hover {
+    background-color: #a4161a;
+  }
+  
+  .botao-logout img {
+    width: 30px;
+    height: 30px;
+  }
+  
+
+  

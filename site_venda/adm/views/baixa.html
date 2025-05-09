@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baixa no Pagamento - Festa Junina 2025</title>
+  <link rel="stylesheet" href="../css/baixa.css">
+  <link rel="stylesheet" href="../css/cabecalho.css">
+  <script defer src="../js/baixa.js"></script>
+</head>
+<div class="top-bar">
+  <img src="../images/SENAI_São_Paulo_logo.png" alt="Logo SENAI" class="logo" />
+ 
+</div>
+
+<!-- Faixa vermelha: menu centralizado -->
+<header class="navbar">
+  <nav>
+    <a href="../views/home.html">Início</a> |
+    <a href="../views/lotes.html">Gerenciar Lotes</a> |
+    <a href="../views/gerenciamento.html">Gerenciar Festa</a> |
+    <a href="../views/baixa.html">Gerenciar Pagamentos</a> |
+    <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
+    <a href="../views/perfil.html">
+      <img src="../images/icon.png" alt="Perfil" class="perfil-icon" />
+    </a>
+  </nav>
+</header>
+
+
+  <main class="pagamento-container">
+    <section class="tabela-pagamento">
+      <div class="cabecalho-tabela">
+        <span>Nome</span>
+        <span>Quantidade</span>
+
+        <div class="dropdown">
+          <button id="btn-filtro">🔍 Filtro</button>
+          <div class="dropdown-content" id="dropdown-filtro">
+            <button class="filtro-status" data-status="confirmado">Confirmado</button>
+            <button class="filtro-status" data-status="pendente">Pendente</button>
+          </div>
+        </div>
+      </div>
+
+      <ul id="lista-pagamentos">
+        <!-- Preenchido via JavaScript -->
+      </ul>
+    </section>
+
+    <aside class="painel-status">
+      <div class="form-baixa">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite o endereço de e-mail..." />
+
+        <input type="text" id="mensagem" placeholder="Digite a mensagem..." />
+
+        <div class="botoes">
+          <button class="btn-cancelar">Cancelar</button>
+          <button class="btn-confirmar">Enviar</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+</body>
+
+</html>

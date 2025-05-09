@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Leitor de QR Code</title>
+  <style>
+    #reader {
+      width: 300px;
+      margin: auto;
+      padding-top: 50px;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="reader"></div>
+  <div id="resultado">Aguardando leitura...</div>
+
+  <!-- Biblioteca html5-qrcode -->
+  <script src="../script/html5-qrcode.min.js" type="text/javascript"></script>
+  <script src="../script/jsQR.min.js"></script>
+  <script src="../script/leitura.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seu perfil</title>
+  <link rel="stylesheet" href="../css/perfil.css"/>
+  <link rel="stylesheet" href="../css/cabecalho.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="top-bar">
+    <img src="../images/SENAI_São_Paulo_logo.png" alt="Logo SENAI" class="logo" />
+   
+  </div>
+  
+  <!-- Faixa vermelha: menu centralizado -->
+  <header class="navbar">
+    <nav>
+      <a href="../views/home.html">Início</a> |
+      <a href="../views/lotes.html">Gerenciar Lotes</a> |
+      <a href="../views/gerenciamento.html">Gerenciar Festa</a> |
+      <a href="../views/baixa.html">Gerenciar Pagamentos</a> |
+      <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
+      <a href="../views/perfil.html">
+        <img src="../images/icon.png" alt="Perfil" class="perfil-icon" />
+      <a href="../index.html">Logout</a>
+      </a>
+    </nav>
+  </header>
+  <div class="container-perfil">
+    <div class="dados">
+      <img src="../images/icone-utilisateur.png" class="foto-user" />
+      <h1 id="username">Roberto Mitsuo Inoue</h1>
+    </div>
+
+    <div class="info-container">
+      <h3>
+        <img src="../images/cadeado.png" class="img-form" />
+        Informações Pessoais:
+      </h3>
+
+      <div class="info-item">
+        <img src="../images/cracha.png" class="img-form" />
+        <span id="nome-completo">Nome completo: Roberto Mitsuo Inoue</span>
+        <input type="text" id="input-nome" class="hidden" />
+      </div>
+
+      <div class="info-item1">
+        <img src="../images/telefone.png" class="img-form" />
+        <span id="telefone">Telefone: (14) 99876-5432</span>
+        <input type="tel" id="input-telefone" class="hidden" />
+      </div>
+
+      <div class="info-item">
+        <img  src="../images/email.webp" class="img-form" />
+        <span id="email">E-mail: roberto.inoue@email.com</span>
+        <input type="email" id="input-email" class="hidden" />
+      </div>
+      <div class="info-item1" id="info-item2">
+        <img src="../images/cadeado.png" class="img-form" />
+        <span id="senha">Senha: **********</span>
+        <input type="password" id="input-senha" class="hidden" />
+        <!-- Novo botão de ver/ocultar senha -->
+        <button type="button" id="toggle-senha" class="btn-ver-senha">Ver Senha</button>
+      </div>
+      
+
+      <button class="btn-editar" id="btn-editar-dados">
+        <img src="../images/edit (1).png" class="edit"/> Editar
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "admin": [
+    {
+      "id": "1",
+      "nome": "roberto",
+      "senha": "roberto123"
+    }
+  ],
+  "usuario": [
+    {
+      "id": "1",
+      "nome": "pedro",
+      "senha": "pedro123"
+    }
+  ],
+  "ingressos": [
+    {
+      "id": "1",
+      "QR Code": "1234 792",
+      "Status": "Não Entrou"
+    }
+  ]
+}

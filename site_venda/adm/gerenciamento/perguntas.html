@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criação de Perguntas</title>
+  <link rel="stylesheet" href="../css/perguntas.css" />
+  <link rel="stylesheet" href="../css/cabecalho.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <img src="../images/SENAI_São_Paulo_logo.png" alt="Logo SENAI" class="logo" />
+   
+  </div>
+  
+  <!-- Faixa vermelha: menu centralizado -->
+  <header class="navbar">
+    <nav>
+      <a href="../views/home.html">Início</a> |
+      <a href="../views/lotes.html">Gerenciar Lotes</a> |
+      <a href="../views/gerenciamento.html">Gerenciar Festa</a> |
+      <a href="../views/baixa.html">Gerenciar Pagamentos</a> |
+      <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
+      <a href="../views/perfil.html">
+        <img src="../images/icon.png" alt="Perfil" class="perfil-icon" />
+      </a>
+    </nav>
+  </header>
+  <main>
+
+    <div class="formulario">
+      <label for="pergunta1"><strong>Pergunta 1</strong></label>
+      <input type="text" id="pergunta1" placeholder="Digite algo...">
+
+      <label for="pergunta2"><strong>Pergunta 2</strong></label>
+      <input type="text" id="pergunta2" placeholder="Digite algo...">
+
+      <label for="pergunta3"><strong>Pergunta 3</strong></label>
+      <input type="text" id="pergunta3" placeholder="Digite algo...">
+    </div>
+
+    <button class="botao-adicionar">CADASTRAR<br> NOVA PERGUNTA</button>
+  </main>
+
+  <footer class="rodape"></footer>
+
+  <script src="../js/pergunta.js" type="module"></script>
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fdf6e3;
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .perguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 2rem;
+  }
+  
+  input[type="text"] {
+    padding: 0.8rem;
+    border-radius: 40px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .adicionar {
+    font-size: 30px;
+    background: #fff176;
+    border: 2px solid #555;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .voltar {
+    margin-top: 2rem;
+    background-color: #e53935;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+  background-color: #8b0000;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 40px 20px;
+    width: 200px;
+    height: 130px;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .botao:hover {
+    background-color: #d73d3d;
+  }
+  .botoes-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Espaçamento entre os botões */
+    flex-wrap: wrap; /* Permite que quebrem linha em telas menores */
+    margin-top: 2rem;
+  }
+  .botao-logout {
+    background-color: #d62828;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao-logout:hover {
+    background-color: #a4161a;
+  }
+  
+  .cabecalho-lotes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .icones-direita {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+ 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/pesquisa.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kode+Mono:wght@400..700&family=Lexend:wght@100..900&family=Prata&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Pesquisa de satisfação</title>
+</head>
+<body>
+    <header>
+        <img src="./img/senai.png" alt="Escola Senai">
+    </header>
+
+    <div class="cabecalho">
+    </div>
+
+    <div class="inicial">
+        <p>Que alegria foi tê ocê com a gente nesta Festa Junina!</p>
+    </div>
+
+    <div class="inicial2">
+        <p>Esperamos que tenha aproveitado bastante, dançado uma boa quadrilha, saboreado umas comidinhas típicas e se divertido pra valer!</p>
+    </div>
+
+    <div class="inicial3">
+        <p>Que tal nos ajudar respondendo um pesquisa de satisfação? É rapidim e vai ajudar demais a melhorar ainda mais nossa festa pro ano que vem, num é?!</p>
+    </div>
+    
+    <div class="titulo"><h1>PESQUISA DE SATISFAÇÃO</h1></div>
+
+        <div id="container-perguntas"></div>
+
+
+        <!-- <div class="texto">
+            <h1>COMENTÁRIOS OPCIONAIS</h1>
+            <textarea id="comentario" placeholder="Digite algo..."></textarea>
+        </div> -->
+
+        <div class="textos">
+            <h1>Muito obrigado! Um abraço apertado e 
+                até a próxima festança! <br> <br>
+                Viva São João!</h1>
+        </div>
+        <div class="btn"> 
+            <button id="enviarRespostas" onclick="enviar(event)">ENVIAR</button>
+        </div>
+    </form>
+
+    <div class="rodape"></div>
+
+
+    <!-- Modal de confirmação -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content" id="modal-content">
+            <h1>CONFIRMAÇÃO DE ENVIO!</h1>
+            <p class="pmodal">SUA RESPOSTA FOI ENVIADA!</p>
+            <P class="pmodal">MUITO OBRIGADO!</P>
+            <button id="okay" onclick="fecharModal()"><p>Ok</p</button>
+        </div>
+    </div>
+
+
+    <script src="./script/pesquisa.js"></script>
+</body>
+</html>

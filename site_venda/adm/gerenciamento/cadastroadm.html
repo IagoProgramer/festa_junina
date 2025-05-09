@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Administrador</title>
+  <link rel="stylesheet" href="../css/cadastroadm.css" />
+  <link rel="stylesheet" href="../css/cabecalho.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <img src="../images/SENAI_São_Paulo_logo.png" alt="Logo SENAI" class="logo" />
+   
+  </div>
+  
+  <!-- Faixa vermelha: menu centralizado -->
+  <header class="navbar">
+    <nav>
+      <a href="../views/home.html">Início</a> |
+      <a href="../views/lotes.html">Gerenciar Lotes</a> |
+      <a href="../views/gerenciamento.html">Gerenciar Festa</a> |
+      <a href="../views/baixa.html">Gerenciar Pagamentos</a> |
+      <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
+      <a href="../views/perfil.html">
+        <img src="../images/icon.png" alt="Perfil" class="perfil-icon" />
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>CADASTRO DE NOVO ADMINISTRADOR!</h2>
+
+    <form id="adminForm" class="form-container">
+      <label>Nome:</label>
+      <input type="text" name="nome" placeholder="Nome Completo" required />
+
+      <label>E-mail:</label>
+      <input type="email" name="email" placeholder="Digite seu E-mail" required />
+
+      <label>Senha:</label>
+      <input type="password" name="senha" placeholder="Digite sua senha" required />
+
+      <label>Confirme sua senha:</label>
+      <input type="password" name="confirmaSenha" placeholder="Digite sua senha" required />
+
+      <label>Telefone:</label>
+      <input type="tel" name="telefone" placeholder="Digite seu telefone" required />
+
+      <div class="checkbox">
+        <input type="checkbox" id="lembrar" />
+        <label for="lembrar">Lembre-se de mim nesse dispositivo!</label>
+      </div>
+
+      <button type="submit" class="submit-btn">CADASTRE-SE</button>
+    </form>
+  </main>
+
+  <script src="../js/cadastroadm.js"></script>
+</body>
+</html>

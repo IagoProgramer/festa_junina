@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f6f4e9;
+  text-align: center;
+}
+
+header {
+  position: relative;
+}
+
+.banner-topo {
+  background-color: white;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.logo-senai{
+  width: 500px;
+  height: 120px;
+  margin: center;
+}
+.logo {
+  height: 60px;
+  margin-right: 20px;
+}
+
+.titulo h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #d62828;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.icone-voltar{
+  height: 20px;
+}
+.homeicone{
+  height: 25px;
+  position: absolute;
+  left: 500px;
+  top: 165px;
+  border: none;
+  background-color: #800000;
+  color: white;
+  font-size: 25px;
+}
+.gerenciarlotes{
+  height: 25px;
+  position: absolute;
+  left: 590px;
+  top: 165px;
+  border: none;
+  background-color: #800000;
+  color: white;
+  font-size: 25px;
+}
+.gerenciarfesta{
+  height: 25px;
+  position: absolute;
+  left: 800px;
+  top: 165px;
+  border: none;
+  background-color: #800000;
+  color: white;
+  font-size: 25px;
+}
+.gerenciarpagamentos{
+  height: 25px;
+  position: absolute;
+  left: 1000px;
+  top: 165px;
+  border: none;
+  background-color: #800000;
+  color: white;
+  font-size: 25px;
+}
+.cadastrar{
+  height: 25px;
+  position: absolute;
+  left: 1280px;
+  top: 165px;
+  border: none;
+  background-color: #800000;
+  color: white;
+  font-size: 25px;
+}
+.cabecalho-lotes{
+  background-color: #800000;
+  height: 80px;
+}
+
+.menu {
+  background-color: #800000;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.menu li.active {
+  background-color: #d62828;
+  border-radius: 10px;
+}
+.titulo-menu {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.icone-perfil {
+  position: absolute;
+  top: 20px;
+  left: 1800px;
+ 
+}
+.iconeperfil{
+  height: 50px;
+  margin-top: 15px;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: nowrap;
+}
+
+.vendidos {
+  max-width: 300px;
+  text-align: left;
+}
+
+.grafico {
+  text-align: center;
+  max-width: 400px;
+}
+
+canvas {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.legenda {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+  margin-top: 15px;
+  padding: 0;
+}
+
+
+.vendidos .box {
+  background-color: #3b3f4e;
+  color: white;
+  padding: 20px;  
+  border-radius: 20px;
+  width: 280px;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.8em;
+}
+
+.vendas-dia .date-picker {
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+.vendas-dia .buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button.cancelar {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+button.ok {
+  background: green;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.grafico {
+  grid-column: span 2;
+  text-align: center;
+}
+
+canvas {
+  max-width: 360px;
+}
+
+.legenda {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.alunos { background: #339CFF; }
+.familiares { background: #FF9999; }
+.infantil { background: #99FF99; }
+.colaboradores { background: #FFCC99; }
+.comunidade { background: #C2BFFF; }
+
+.secao-btn {
+  background-color: #800000;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.data-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2f3443; /* mesma base da .box */
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-family: inherit; /* herda a mesma fonte */
+  
+}
+
+.data-box label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.data-box input[type="date"] {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}

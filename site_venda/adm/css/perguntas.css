@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* fundo vermelho escuro */
+  color: white;
+}
+
+.logo-senai {
+  height: 70px;
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 805px;
+}
+
+.cabecalho-lotes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #8B0000;
+  padding: 40px 10px;
+}
+
+.cabecalho-lotes img {
+  height: 30px;
+}
+
+.titulo-cabecalho {
+  font-size: 25px;
+  color: white;
+}
+
+.icone-voltar,
+.icone-perfil {
+  text-decoration: none;
+}
+
+.voltar-lotes {
+  display: block;
+  margin: 15px;
+}
+
+main {
+  padding: 2rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+input[type="text"] {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  background-color: #cfcfcf;
+  color: black;
+  width: 1790px;
+  height: 27px;
+}
+
+.botao-adicionar {
+  background-color: #97080A;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 50px;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao-adicionar:hover {
+  background-color: #c70000;
+}
+
+.rodape {
+  background-color: #8B0000; /* mesma cor usada no restante do site */
+  height: 50px;
+  width: 100%;
+  position: relative;
+  margin-top: 208px;
+}

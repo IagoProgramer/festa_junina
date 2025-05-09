@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerenciamento de Lotes</title>
+  <link rel="stylesheet" href="../css/novolote.css">
+  <link rel="stylesheet" href="../css/cabecalho.css">
+</head>
+<body>
+  <body>
+    <div class="top-bar">
+      <img src="../images/SENAI_São_Paulo_logo.png" alt="Logo SENAI" class="logo" />
+     
+    </div>
+    
+    <!-- Faixa vermelha: menu centralizado -->
+    <header class="navbar">
+      <nav>
+        <a href="../views/home.html">Início</a> |
+        <a href="../views/lotes.html">Gerenciar Lotes</a> |
+        <a href="../views/gerenciamento.html">Gerenciar Festa</a> |
+        <a href="../views/baixa.html">Gerenciar Pagamentos</a> |
+        <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
+        <a href="../views/perfil.html">
+          <img src="../images/icon.png" alt="Perfil" class="perfil-icon" />
+        </a>
+      </nav>
+    </header>
+  <a href="../views/lotes.html" class="voltar-lotes">
+    <img src="../images/seta.png" alt="Voltar" class="icone-voltar">
+  </a>
+  
+  <main class="container"> 
+    <div class="formulario">
+      <label>Valor</label>
+      <input type="text" id="valor" placeholder="R$ 16,00">
+
+      <label>Data Abertura</label>
+      <input type="date" id="abertura">
+
+      <label>Data Fechamento</label>
+      <input type="date" id="fechamento">
+
+      <label>Quantidade de Ingressos</label>
+      <input type="number" id="quantidade" placeholder="250">
+
+      <div class="botoes">
+        <button class="concluir" onclick="salvarEdicao()">CONCLUIR</button>
+        <button class="cancelar" onclick="cancelar()">CANCELAR</button>
+      </div>
+    </div>
+
+    <table class="tabela-lotes">
+      <thead>
+        <tr>
+          <th>Valor</th>
+          <th>Valor Infantil</th>
+          <th>Abertura</th>
+          <th>Fechamento</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-corpo">
+        <!-- Itens adicionados aqui via JS -->
+      </tbody>
+    </table>
+
+    <div class="botoes">
+        <button class="concluir" onclick="salvar()">SALVAR</button>
+        <button class="cancelar" onclick="cancelar()">CANCELAR</button>
+      </div>
+    </div>
+
+    <div id="meuModal" class="modal">
+      <div class="modal-conteudo" id="modal">
+        <h2 class="letras">Lote criado!</h2>
+        <p class="letras">Seu lote foi criado e pode ser visto em outra aba.</p>
+        <button class="fechar" onclick="fecharmodal()">Ok</button>
+      </div>
+    </div>
+
+    <div id="modal-erro" class="modal" >
+      <div class="modal-conteudo" id="modalconteudoerro">
+        <h2 class="letras">Erro</h2>
+        <p id="mensagem-erro" class="letras">Algo deu errado.</p>
+        <button onclick="fecharModalErro()">Ok</button>
+      </div>
+    </div>
+
+  <script src="../js/editarlote.js"></script>
+</body>
+</html>

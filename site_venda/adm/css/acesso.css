@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fdf6e3;
+    color: #000;
+  }
+  
+  .topo {
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .barra-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8B0000;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .home-icon, .perfil-icon {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .titulo {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  .conteudo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  
+  .grafico-container {
+    max-width: 700px;
+    margin-left: 140px;
+    margin-right: -500px;
+  }
+  
+  
+  .legenda-container {
+    background-color: #800000;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 700px;
+    margin-left: 600px;
+  }
+  
+  .legenda-container h3 {
+    margin-top: -12px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    height: 10px;
+    color: white;
+  }
+  .pessoas{
+    background-color: #800000;
+    border-radius: 15px;
+    padding: 15px;
+    width: 700px;
+    margin-top: 40px;
+    margin-left: 600px;
+  }
+  
+  .legenda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 1.5rem;
+    
+  }
+  
+  .item-legenda {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .bolinha {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  
+  .verde {
+    background-color: #4CAF50;
+    width: 35px;
+  }
+  
+  .vermelha {
+    background-color: #e53935;
+    width: 35px;
+  }
+  .rodape{
+    background-color: #800000;
+    color: #800000;
+    margin-top: 382px;
+    height: 50px;
+  }
+  
+  

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerenciador de Lotes</title>
+  <link rel="stylesheet" href="../css/lotes.css">
+  <link rel="stylesheet" href="../css/cabecalho.css">
+</head>
+<body>
+  <div class="top-bar">
+    <img src="../images/SENAI_São_Paulo_logo.png" alt="Logo SENAI" class="logo" />
+   
+  </div>
+  
+  <!-- Faixa vermelha: menu centralizado -->
+  <header class="navbar">
+    <nav>
+      <a href="../views/home.html">Início</a> |
+      <a href="../views/lotes.html">Gerenciar Lotes</a> |
+      <a href="../views/gerenciamento.html">Gerenciar Festa</a> |
+      <a href="../views/baixa.html">Gerenciar Pagamentos</a> |
+      <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
+      <a href="../views/perfil.html">
+        <img src="../images/icon.png" alt="Perfil" class="perfil-icon" />
+      </a>
+    </nav>
+  </header>
+  <div class="container">
+    <!-- link de criar lote redireciona para sua página de cadastro -->
+    <a href="../views/novolote.html" class="criar-lote">CRIAR NOVO LOTE</a>
+  
+    <!-- container vazio: só vai receber itens depois que você criar via API -->
+    <div id="container-lotes"></div>
+  </div>
+  <div class="card-lote" data-lote-id="123">
+    <!-- conteúdo do lote -->
+  </div>
+
+  <div id="modal" style="display: none;">
+    <div class="modal-content">
+      <p>Tem certeza de que deseja excluir?</p>
+      <button onclick="confirmarExclusao()">Confirmar</button>
+      <button onclick="fecharModal()">Cancelar</button>
+    </div>
+  </div>
+  
+  
+  <script src="../js/lotes.js"></script>
+</body>
+</html>
