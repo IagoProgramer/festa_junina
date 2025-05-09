@@ -263,7 +263,7 @@ margin-top: 60px;
       /* RESPONSIVIDADE */
 
 
-  @media(max-width: 430px){
+  @media(max-width: 500px){
     .btn-cadastro {
       background: none;
       border: none;
@@ -277,6 +277,7 @@ margin-top: 60px;
     .icone-perfil {
       width: 40px;  
       height: 40px;
+      margin-left: -100px;
     }
     
     header{
@@ -286,11 +287,13 @@ margin-top: 60px;
       align-items: center;
       justify-content: center;
       position: relative;
+      width: 100%;
     }
     
     #carouselExampleIndicators{
       width: 400px;
       margin: 0 auto;
+      z-index: 1;
     }
     .img_festa{
       display: block;
@@ -303,6 +306,7 @@ margin-top: 60px;
       height: 300px;
       top: 0%;
       padding-top: 60px;
+      z-index: 2;
     }
     
     .senai{
@@ -315,7 +319,7 @@ margin-top: 60px;
     .bemvindo{
       background-color: white;
       text-align: center;
-      
+      width: 100%;
       }
       .t1{
       font-size: 23px;
@@ -393,6 +397,7 @@ margin-top: 60px;
           text-align: left;
           margin-left: 5px;
           margin-right: auto;
+          width: 100%;
         }
         
         .t3{

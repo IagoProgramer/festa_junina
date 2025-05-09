@@ -183,16 +183,19 @@
     font-size: 20px;
   }
 
-  @media(max-width: 430px){
+  @media(max-width: 500px){
     header {
       background-color: #ffffff;
       text-align: center;
       padding: 10px 0;
       width: 100%;
+      display: flex;
     }
     
     header img {
       height: 40px;
+      margin-left: auto;
+      margin-right: auto;
     }
     nav {
       background-color: #97080A;

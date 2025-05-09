@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const apiBase = "https://back-end-festa-junina.onrender.com/api/Clientes";
+  const apiBase = "http://10.90.146.37/api/api/Clientes";
   const urlUsuarios = `${apiBase}/CadastrarCliente`;
   const urlLogin = `${apiBase}/LoginCliente`;
 
-  // Função para verificar se está logado
   function estaLogado() {
     return localStorage.getItem("usuarioEmail") && localStorage.getItem("usuarioSenha");
   }
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const caminhoPerfil = estaNaPastaPag ? "./perfil.html" : "./pag/perfil.html";
   const caminhoCadastro = estaNaPastaPag ? "./cadastro.html" : "./pag/cadastro.html";
 
-  // Botão perfil
   const botaoPerfil = document.getElementById("botao_perfil");
   if (botaoPerfil) {
     botaoPerfil.addEventListener("click", function (event) {
@@ -21,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Verificação de login para botões de ingresso
   function validarLoginOuRedirecionar(event) {
     if (!estaLogado()) {
       event.preventDefault();
@@ -34,7 +31,34 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btn) btn.addEventListener("click", validarLoginOuRedirecionar);
   });
 
-  // Formulários
+  async function fazerLogin(email, senha, redirecionar = true) {
+    try {
+      const response = await fetch(urlLogin, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        localStorage.setItem("usuarioNome", data.cliente?.nome || "");
+        localStorage.setItem("usuarioEmail", data.cliente?.email || email);
+        localStorage.setItem("usuarioTelefone", data.cliente?.telefone || "");
+        localStorage.setItem("usuarioSenha", senha);
+        localStorage.setItem("clienteId", data.cliente?.id || "");
+
+        if (redirecionar) {
+          window.location.href = caminhoPerfil;
+        }
+      } else {
+
+      }
+    } catch (error) {
+
+    }
+  }
+
   const formRegistro = document.getElementById("registerForm");
   if (formRegistro) {
     formRegistro.addEventListener("submit", async function (event) {
@@ -54,59 +78,33 @@ document.addEventListener("DOMContentLoaded", function () {
         const data = await response.json();
 
         if (response.ok) {
-          alert("Cadastro realizado com sucesso!");
-          localStorage.setItem("usuarioNome", data.cliente?.nome || nome);
-          localStorage.setItem("usuarioEmail", email);
-          localStorage.setItem("usuarioTelefone", telefone);
-          localStorage.setItem("usuarioSenha", senha);
-          localStorage.setItem("idLogado", data.cliente?.id || "");
 
-          window.location.href = "./perfil.html";
+          await fazerLogin(email, senha);
+          window.location.href="../pag/compraingresso.html" // login automático
         } else {
-          alert("Erro ao registrar: " + (data.message || "Verifique os dados."));
+
         }
       } catch (error) {
-        alert("Erro na requisição: " + error.message);
+
       }
     });
   }
 
   const formLogin = document.getElementById("loginForm");
   if (formLogin) {
-    formLogin.addEventListener("submit", async function (event) {
+    formLogin.addEventListener("submit", function (event) {
       event.preventDefault();
       const email = document.getElementById("loginEmail").value;
       const senha = document.getElementById("loginSenha").value;
       const lembrar = document.getElementById("lembrarUsuario")?.checked;
 
-      try {
-        const response = await fetch(urlLogin, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, senha }),
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-          alert(`Bem-vindo, ${data.cliente?.nome || "usuário"}!`);
-          localStorage.setItem("usuarioNome", data.cliente?.nome || "");
-          localStorage.setItem("usuarioEmail", data.cliente?.email || email);
-          localStorage.setItem("usuarioTelefone", data.cliente?.telefone || "");
-          localStorage.setItem("usuarioSenha", senha);
-          localStorage.setItem("clienteId", data.cliente?.id || "");
-
-          lembrar
-            ? localStorage.setItem("lembrarUsuario", "true")
-            : localStorage.removeItem("lembrarUsuario");
-
-          window.location.href = "../pag/perfil.html";
+      fazerLogin(email, senha).then(() => {
+        if (lembrar) {
+          localStorage.setItem("lembrarUsuario", "true");
         } else {
-          alert("Erro no login: " + (data.message || "Email ou senha incorretos."));
+          localStorage.removeItem("lembrarUsuario");
         }
-      } catch (error) {
-        alert("Erro na requisição: " + error.message);
-      }
+      });
     });
   }
 
@@ -126,18 +124,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const data = await response.json();
 
         if (response.ok) {
-          alert("Nova senha enviada ao seu email.");
+
           window.location.href = "login.html";
         } else {
-          alert("Erro ao redefinir senha: " + (data.message || "E-mail não encontrado."));
+
         }
       } catch (error) {
-        alert("Erro na requisição: " + error.message);
+  
       }
     });
   }
 
-  // Preencher login se lembrar estiver ativado
   if (localStorage.getItem("lembrarUsuario") === "true") {
     const emailInput = document.getElementById("loginEmail");
     const senhaInput = document.getElementById("loginSenha");
@@ -152,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Carregar dados no perfil
   const perfilPage = window.location.pathname.includes("perfil.html");
   if (perfilPage) {
     const nome = localStorage.getItem("usuarioNome") || "Nome não encontrado";
@@ -174,7 +170,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setValue("senha", "input-senha", senha);
   }
 
-  // Logout
   const botao_logout = document.getElementById("botao_logout");
   if (botao_logout) {
     botao_logout.addEventListener("click", function () {

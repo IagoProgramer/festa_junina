@@ -105,16 +105,24 @@ main {
   }
   
 
-@media (max-width: 430px) {
+@media (max-width: 500px) {
+    header{
+        display: flex;
+        flex-direction: row;
+    }
     .menu-bar {
         flex-direction: column;
         align-items: center;
         gap: 10px;
         height: 40px;
     }
-
+    .logo{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .logo img {
-        width: 140px;
+        width: 200px;
     }
 
     .usuario img {

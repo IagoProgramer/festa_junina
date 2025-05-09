@@ -1,11 +1,11 @@
 const menu = document.getElementById('menu');
 const opcoes = document.getElementById('menu-options2');
-const mediaQuery = window.matchMedia('(max-width: 430px)');
+const mediaQuery = window.matchMedia('(max-width: 500px)');
 
 function abre_menu() {
-    opcoes.style.display = 'flex';
+    opcoes.style.display = 'grid';
     Array.from(opcoes.children).forEach(child => {
-        child.style.display = 'flex';
+        child.style.display = 'grid';
     });
 }
 
@@ -18,7 +18,7 @@ function fecha_menu() {
 
 function toggle_menu() {
     if (mediaQuery.matches) {
-        const estaAberto = opcoes.style.display === 'flex';
+        const estaAberto = opcoes.style.display === 'grid';
         if (estaAberto) {
             fecha_menu();
         } else {

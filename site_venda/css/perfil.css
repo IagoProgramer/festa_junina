@@ -50,7 +50,7 @@ header{
     margin-left: 200px;
 }
 
-#editar-btn {
+/*#editar-btn {
     background-color: #97080A;
     width: 180px;
     height: 40px;
@@ -70,8 +70,8 @@ header{
 }
   
 #editar-btn:hover {
-    background-color: #a60000; /* tom mais claro no hover */
-}
+    background-color: #a60000;
+}*/
     
 
 .edit {
@@ -126,7 +126,7 @@ header{
 
 
   
-.btn-editar {
+/*.btn-editar {
     background-color: #97080A;
     color: white;
     border: none;
@@ -141,7 +141,7 @@ header{
     gap: 10px;
     align-self: center;
     margin-top: 20px;
-}
+}*/
   
 .container-perfil {
     display: flex;
@@ -242,3 +242,48 @@ input{
     font-size: 20px;
     font-family: sans-serif;
   }
+  @media (max-width: 500px) {
+  .container-perfil {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .dados {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto-user {
+    width: 200px;
+  }
+
+  #editar-btn {
+    width: 160px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .username, #username {
+    font-size: 18px;
+  }
+
+  .info-container {
+    width: 90%;
+    margin-top: 50px;
+  }
+
+  header {
+    height: 70px;
+  }
+
+  .cabecalho2 {
+    height: 56px;
+  }
+
+  .botao_logout {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+}
