@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Redireciona para a home
-      window.location.href = "./views/home.html";
+      window.location.href = "./adm/views/home.html";
     } catch (error) {
       console.error("Erro ao fazer login:", error);
       mostrarErro("Erro ao se conectar. Tente novamente.");

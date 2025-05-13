@@ -38,7 +38,7 @@ function confirmarExclusao() {
 
 // Função para carregar os lotes
 function carregarLotes() {
-  fetch("http://10.90.146.37/api/api/Lote")
+  fetch("`https://back-end-festa-junina.onrender.com/api/Lote")
     .then(res => {
       if (!res.ok) throw new Error("Erro ao carregar lotes");
       return res.json();
@@ -92,7 +92,7 @@ function atualizarStatus(id, checkboxElement) {
   if (ativar) {
     desativarTodosLotes().then(() => {
       // Buscar os dados do lote pelo ID
-      fetch(`http://10.90.146.37/api/api/Lote/${id}`)
+      fetch(`https://back-end-festa-junina.onrender.com/api/Lote/${id}`)
         .then(res => {
           if (!res.ok) throw new Error("Erro ao buscar dados do lote");
           return res.json();
@@ -102,7 +102,7 @@ function atualizarStatus(id, checkboxElement) {
           lote.ativo = 1;
 
           // Envia os dados completos do lote para atualização
-          return fetch(`http://10.90.146.37/api/api/Lote/EditarLote/${id}`, {
+          return fetch(`https://back-end-festa-junina.onrender.com/api/Lote/EditarLote/${id}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json"
@@ -153,7 +153,7 @@ function atualizarStatus(id, checkboxElement) {
     });
   } else {
     // Se o lote foi desativado, apenas atualize no backend
-    fetch(`http://10.90.146.37/api/api/Lote/${id}`)
+    fetch(`https://back-end-festa-junina.onrender.com/api/Lote/${id}`)
       .then(res => {
         if (!res.ok) throw new Error("Erro ao buscar dados do lote");
         return res.json();
@@ -162,7 +162,7 @@ function atualizarStatus(id, checkboxElement) {
         lote.ativo = 0;
 
         // Envia os dados completos do lote para atualização
-        return fetch(`http://10.90.146.37/api/api/Lote/EditarLote/${id}`, {
+        return fetch(`https://back-end-festa-junina.onrender.com/api/Lote/EditarLote/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
@@ -196,7 +196,7 @@ function atualizarStatus(id, checkboxElement) {
 
 // Função para desativar todos os outros lotes
 function desativarTodosLotes() {
-  return fetch("http://10.90.146.37/api/api/Lote")
+  return fetch("https://back-end-festa-junina.onrender.comi/api/Lote")
     .then(res => {
       if (!res.ok) throw new Error("Erro ao carregar lotes");
       return res.json();
@@ -206,7 +206,7 @@ function desativarTodosLotes() {
       const promises = lotes.map(lote => {
         if (lote.ativo === 1) {
           lote.ativo = 0;
-          return fetch(`http://10.90.146.37/api/api/Lote/EditarLote/${lote.id}`, {
+          return fetch(`https://back-end-festa-junina.onrender.com/api/Lote/EditarLote/${lote.id}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json"
