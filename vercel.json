@@ -13,7 +13,7 @@
       "destination": "/adm/css/index.css"
     },
     {
-      "source": "/adm/(.*)",
+      "source": "/adm/(.*)",    
       "destination": "/adm/$1"
     },
     {
