@@ -130,7 +130,7 @@ function montarPedido(quantidadeTipos) {
 
     quantidadeTipos = qtdTipos;
 
-    const urlPedido = 'http://10.90.146.37/api/api/Ingresso/ReservaIngressos';
+    const urlPedido = 'https://back-end-festa-junina.onrender.com/api/Ingresso/ReservaIngressos';
 
     const emailLogado = localStorage.getItem("usuarioEmail");
     const senhaLogado = localStorage.getItem("usuarioSenha");

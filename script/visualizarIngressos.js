@@ -4,7 +4,7 @@ async function deletarIngresso(id) {
     if (!confirmacao) return;
 
     try {
-        const response = await fetch(`http://10.90.146.37/api/api/Ingresso/CancelarIngresso/${id}`, {
+        const response = await fetch(`https://back-end-festa-junina.onrender.com/api/Ingresso/CancelarIngresso/${id}`, {
             method: "DELETE"
         });
 
@@ -25,10 +25,10 @@ async function visualizarIngresso() {
     try {
         const idLogado = localStorage.getItem("clienteId");
 
-        const urlIngressos = `http://10.90.146.37/api/api/Ingresso/ConsultarIngresso/${idLogado}`;
-        const urlUsuarios = `http://10.90.146.37/api/api/Usuario`;
-        const urlLotes = `http://10.90.146.37/api/api/Lote`;
-        const urlDeleta = `http://10.90.146.37/api/api/CancelarIngresso`;
+        const urlIngressos = `https://back-end-festa-junina.onrender.com/api/Ingresso/ConsultarIngresso/${idLogado}`;
+        const urlUsuarios = `https://back-end-festa-junina.onrender.com/api/Usuario`;
+        const urlLotes = `https://back-end-festa-junina.onrender.com/api/Lote`;
+        const urlDeleta = `https://back-end-festa-junina.onrender.com/api/CancelarIngresso`;
 
         // Faz as duas requisições em paralelo
         const [resIngressos, resUsuarios, resLotes] = await Promise.all([

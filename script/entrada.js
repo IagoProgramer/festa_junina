@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const apiBase = "http://10.90.146.37/api/api/Clientes";
+  const apiBase = "https://back-end-festa-junina.onrender.com/api/Clientes";
   const urlUsuarios = `${apiBase}/CadastrarCliente`;
   const urlLogin = `${apiBase}/LoginCliente`;
 
