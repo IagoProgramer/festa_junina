@@ -1,0 +1,40 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/adm",
+      "destination": "/adm/index.html"
+    },
+    {
+      "source": "/adm/(.*)",
+      "destination": "/adm/$1"
+    },
+    {
+      "source": "/pesquisa",
+      "destination": "/pesquisa/pesquisa.html"
+    },
+    {
+      "source": "/pesquisa/(.*)",
+      "destination": "/pesquisa/$1"
+    },
+    {
+      "source": "/css/(.*)",
+      "destination": "/css/$1"
+    },
+    {
+      "source": "/img/(.*)",
+      "destination": "/img/$1"
+    },
+    {
+      "source": "/script/(.*)",
+      "destination": "/script/$1"
+    },
+    {
+      "source": "/pag/(.*)",
+      "destination": "/pag/$1"
+    }
+  ]
+}
