@@ -9,6 +9,10 @@
       "destination": "/adm/index.html"
     },
     {
+      "source": "/adm/css/index.css",
+      "destination": "/adm/css/index.css"
+    },
+    {
       "source": "/adm/(.*)",
       "destination": "/adm/$1"
     },
@@ -19,22 +23,6 @@
     {
       "source": "/pesquisa/(.*)",
       "destination": "/pesquisa/$1"
-    },
-    {
-      "source": "/css/(.*)",
-      "destination": "/css/$1"
-    },
-    {
-      "source": "/img/(.*)",
-      "destination": "/img/$1"
-    },
-    {
-      "source": "/script/(.*)",
-      "destination": "/script/$1"
-    },
-    {
-      "source": "/pag/(.*)",
-      "destination": "/pag/$1"
     }
   ]
 }
