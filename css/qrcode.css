@@ -1,55 +1,40 @@
-.faixa-vermelha {
-    background-color: #97080A; /* Cor vermelha */
-    padding: 20px;
-    font-weight: bold;
-    display: flex; /* Usar flexbox para alinhar os itens */
-    justify-content: space-between; /* Espaçar os itens ao máximo */
-    align-items: center; /* Alinhar verticalmente ao centro */
-    border: 0px;
-}
-.faixa-branca {
-    background-color: #FFFFFF; /* Cor branca */
-    padding: 1px;
-    font-weight: bold;
-
-}
-
-.icone-esquerda {
-    max-width: 30px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-}
-
-.icone-direita {
-    max-width: 30px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
+.icone-perfil {
+    width: 63px;
+    height: 63px;
+    cursor: pointer;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin-top: 10px;
 }
 
 /* Restante dos seus estilos CSS (mantenha-os) */
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: #97080A;
+    padding: 0;
+    min-height: 100vh;
     color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background-color: #ffffff; 
-    color: white;
-    padding: 15px;
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    margin-bottom: 0.5pc;
 }
 
-header h1 {
+.logo-senai {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    height: 60px;
     margin: 0;
-    font-size: 24px;
-    color: #000; /* Cor do texto do título */
-}
-
-header img {
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;/*margem senai bai*/
 }
 
 h2 {
@@ -62,8 +47,9 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    padding: 40px;
     gap: 20px;
+    background-color: #97080A;
 }
 
 .card-ingresso {
@@ -157,37 +143,45 @@ h2 .icone-titulo {
 }
 
 
-.sup{
-    background-color: white;
-    text-align: center;
-    
-  }
+.sup {
+    display: flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
     .contato{
     font-size: 10px;
     margin-top: 50px;
   }
-    .cont{
-      font-size: 40px;
-    }
+
     .sup1{
-    background-color: #97080A;
-    border-radius: 40px;
-    width: 170px;
-    height: 50px;
-    margin-top: 20px;
-    font-size: 20px;
-    color: white;
-    border: none;
-    margin-bottom: 30px;
-  }
+        background-color: #97080A;
+        border-radius: 40px;
+        width: 170px;
+        height: 50px;
+        margin-top: 20px;
+        font-size: 20px;
+        color: white;
+        border: none;
+        margin-left: 11pc;
+    }
     .rodape{
-    background-color: #97080A;
-    margin-bottom: 0;
-    margin-top: 0;
-    height: 70px;
-    user-select: none;
-    height: 20px;
-  }
+        background-color: #97080A;
+        height: 50px;
+        text-align: center;
+        color: white;
+        user-select: none;
+        width: 100%;
+        margin-top: auto; /* Empurra o rodapé para o final */
+        line-height: 50px;
+    }
     .rod1{
     color: #97080A;
   }
@@ -202,8 +196,67 @@ h2 .icone-titulo {
 .card-conteudo2{
     display:none;
 }
+
+@media (max-width: 1024px) {
+    .cont b {
+        font-size: 25px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 40px;
+        gap: 20px;
+        margin-bottom: 25px;
+        background-color: #97080A;
+    }
+
+    .rodape {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #97080A;
+        height: 50px;
+        text-align: center;
+        color: white;
+        user-select: none;
+        z-index: 1;
+    }
+
+    .sup1 {
+        width: 220px;
+        margin-bottom: 50px;
+    }
+
+    .menu-container {
+        width: 10px;
+        margin-right: 63.5pc;
+        position: absolute;
+    }
+    .navbar {
+        background-color: #97080A;
+        padding: 40px;
+    }
+}
+
 @media(max-width:600px){
     header{
         display: flex;
+    }
+    
+    .sup b {
+        font-size: 21.5px;
+    }
+
+    .sup1 {
+        width: 190px;
+        margin-bottom: 50px;
+    }
+
+    .navbar {
+        background-color: #97080A;
+        padding: 40px;
     }
 }

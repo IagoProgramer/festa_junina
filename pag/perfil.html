@@ -24,9 +24,10 @@
             </div>
           </div>
         <img src="../img/SENAI_São_Paulo_logo.png" class="senai">
+        <button class="botao_logout"><img src="../img/loguot.png" alt="logout" id="botao_logout" ></button>
     </header>
 
-    <div class="cabecalho2">
+    <div class="navbar">
         <div class="menu-options" id="centro_menu">
             <a href="../index.html"  id="none_border">Início</a>
             <a href="./compraingresso.html">Garanta seu ingresso</a>
@@ -35,7 +36,6 @@
             <a href="./misscaipira.html">Miss Caipira</a>
             <a href="./cadastro.html">Criar/Entrar na conta</a>
         </div>
-        <button><img src="../img/loguot.png" alt="logout" id="botao_logout" class="botao_logout"></button>
     </div>
 
     <div class="container-perfil">
@@ -68,21 +68,19 @@
         
             <div class="info-item">
                 <i class="fa-solid fa-envelope"></i>
-                <img src="../img/email.webp" class="img-form">
+                <img src="../img/email.png" class="img-form">
                 <span id="email">E-mail</span>
                 <input type="email" id="input-email" style="display:none;" value="E-mail">
             </div>
         
             <div class="info-item1" id="info-item2">
                 <img src="../img/cadeado.png" class="img-form">
-                <span id="senha">Senha</span>
-                <input type="password" id="input-senha" style="display:none;" value="Senha">
-                <button><img src="../img/eye-close.png" alt="Esconder senha" class="eye" id="toggle-senha"></button>
+                <input type="password" id="input-senha" value="Senha" disabled style="color: black; width: 100%;">
+                <button id="toggle-senha">
+                    <img src="../img/eye-close.png" alt="Esconder senha" class="eye" id="eye-icon">
+                </button>
             </div>
         
-            <!--<button class="btn-editar" id="btn-editar-dados">
-                <img src="../img/edit.png" class="edit" id="editar-imagem"> Editar
-            </button>-->
         </div>
     </div>
 

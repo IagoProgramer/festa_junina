@@ -66,32 +66,16 @@ body {
     padding: 1dvh;
 }
 
-.faixa-vermelha {
-    width: 100%;
-    height: 60px;
-    background-color: #97080A;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-    position: relative;
-}
-
-/* Centralizar logo absolutamente no meio da faixa */
-.logo-centro {
-    height: 45px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 /* Ícones laterais */
 .icone-header {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
+    width: 63px;
+    height: 63px;
     cursor: pointer;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin-top: 10px;
 }
 
 .icone-header.esquerda,
@@ -280,21 +264,19 @@ g {
 .option .container {
  font-weight: bold;
 }
-  
-.faixa-vermelha {
-    width: 100%;
-    background-color: #97080A;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    text-align: center;
-}
 
 .logo-centro {
-    height: 45px;
-    margin-bottom: 10px;
-    position: static;
-    transform: none;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .icones-abaixo {
     display: flex;
@@ -303,25 +285,11 @@ g {
 }
 
 header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
     text-align: center;
     margin-bottom: 10px;
-}
-
-.logo-centro {
-    height: 60px;
-    margin: 10px auto;
-    display: block;
-}
-
-.faixa-vermelha {
-    width: 100%;
-    height: 60px;
-    background-color: #97080A;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box;
 }
 
 select {
@@ -415,12 +383,30 @@ select {
   .contato b{
     font-size: 30px;
   }
-  
+  .aviso{
+    color:#97080A;
+  }
+@media (max-width: 1024px) {
+    .carrinho{
+        width: 50%;
+        height: 20pc;
+        margin-top: 25px;
+    }
+
+    .mensagem-centro p {
+        font-size: 32px;
+    }
+
+    .mensagem-centro g {
+        font-size: 27px;
+    }
+    .navbar {
+        background-color: #97080A;
+        padding: 40px;
+    }
+}
 
 @media(max-width: 600px){
-    header{
-        display: flex;
-    }
     .container{
         display: grid;
         grid-template-columns: 1fr;
@@ -433,5 +419,9 @@ select {
     }
     .titulo{
         text-align: center;
+    }
+    .navbar {
+        background-color: #97080A;
+        padding: 40px;
     }
 }

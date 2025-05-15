@@ -38,7 +38,7 @@ function confirmarExclusao() {
 
 // Função para carregar os lotes
 function carregarLotes() {
-  fetch("`https://back-end-festa-junina.onrender.com/api/Lote")
+  fetch("https://back-end-festa-junina.onrender.com/api/Lote")
     .then(res => {
       if (!res.ok) throw new Error("Erro ao carregar lotes");
       return res.json();
@@ -52,6 +52,7 @@ function carregarLotes() {
       }
 
       lotes.forEach((lote, index) => {
+        const idLote = lote.id;
         const ativo = lote.ativo === 1;
         const qtdTotal = lote.qtd_total || 0;
         const dataInicio = new Date(lote.data_inicio).toLocaleDateString("pt-BR");
@@ -61,7 +62,7 @@ function carregarLotes() {
           <div class="lote ${ativo ? "ativo" : "inativo"}" data-id="${lote.id}">
             <strong style="font-size: 35px; font-style: italic;">Lote ${index + 1}</strong>
             <div class="acoes">
-              <a href="../views/editarlote.html?id=${lote.id}" class="editar" style="margin-left: 15px;">EDITAR</a>
+              <a href="../views/editarlote.html?id=${idLote}" class="editar" style="margin-left: 15px;">EDITAR</a>
               <button class="excluir" onclick="abrirModal(this)" data-id="${lote.id}">EXCLUIR</button>
               <p class="info" style="font-size: 20px; font-style: italic;">Quantidade Total: <b>${qtdTotal}</b></p>
               <p class="info" style="font-size: 20px; font-style: italic;">Data de Início: <b>${dataInicio}</b></p>
@@ -196,7 +197,7 @@ function atualizarStatus(id, checkboxElement) {
 
 // Função para desativar todos os outros lotes
 function desativarTodosLotes() {
-  return fetch("https://back-end-festa-junina.onrender.comi/api/Lote")
+  return fetch("https://back-end-festa-junina.onrender.com/api/Lote")
     .then(res => {
       if (!res.ok) throw new Error("Erro ao carregar lotes");
       return res.json();

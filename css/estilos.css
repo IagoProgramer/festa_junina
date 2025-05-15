@@ -56,17 +56,22 @@ body {
 }
 
 .icone-perfil {
-  width: 60px;  
-  height: 60px;
+  width: 63px;
+  height: 63px;
+  cursor: pointer;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
 }
 
 header{
-  background-color: white;
-  height: 84px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 5.2pc;
 }
 
 #carouselExampleIndicators{
@@ -84,15 +89,18 @@ header{
   background-color: #97080A;
   height: 600px;
   top: 0%;
-  padding-top: 60px;
 }
 
 .senai{
-  height: 60px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 15px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bemvindo{
@@ -263,206 +271,392 @@ margin-top: 60px;
       /* RESPONSIVIDADE */
 
 
-  @media(max-width: 500px){
-    .btn-cadastro {
-      background: none;
-      border: none;
-      cursor: pointer;
-      position: absolute;
-      right: 0px;
-      top: 20px;
-      bottom: auto;
-    }
-    
-    .icone-perfil {
-      width: 40px;  
-      height: 40px;
-      margin-left: -100px;
-    }
-    
-    header{
-      background-color: white;
-      height: 84px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      width: 100%;
-    }
-    
-    #carouselExampleIndicators{
-      width: 400px;
-      margin: 0 auto;
-      z-index: 1;
-    }
-    .img_festa{
-      display: block;
-      width: 100%;
-    }
-    
-    .conteiner-carrossel{
-      width: 100%;
-      background-color: #97080A;
-      height: 300px;
-      top: 0%;
-      padding-top: 60px;
-      z-index: 2;
-    }
-    
-    .senai{
-      height: 40px;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 20px;
-    }
-    .bemvindo{
-      background-color: white;
-      text-align: center;
-      width: 100%;
-      }
-      .t1{
-      font-size: 23px;
-      color: #97080A;
-      }
-      .cdp{
-      font-size: 15px;
-      color: black;
-      }
-      .bot1{
-      border-radius: 50px;
-      background-color: #97080A; 
-      height: 40px;
-      width: 200px;
-      border: none;
-      font-size: 15px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 40px;
-      margin-top: -1000px;
-      }
-      .bot2{
-      border-radius: 50px;
-      background-color: #97080A;
-      margin-left: auto;
-      margin-top: -40px;
-      height: 40px;
-      width: 200px;
-      border: none;
-      font-size: 15px;
-      margin-left: auto;
-      margin-right: auto;
-      }
-      .bot1 a:hover{
-        color: white;
-        text-decoration: none;
-      }
-      .bot2 a:hover{
-        color: white;
-        text-decoration: none;
-      }
-      .tt1{
-        color: white;
-        font-size: 15px;
-        }
-        .tt2{
-        color: white;
-        font-size: 15px;
-        }
-      .container_botao{
-        margin-top: 80px;
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-      .noite{
-        text-align: center;
-        color: white;
-        background-color: #97080A;
-        height: 100%;
-        }
-        .subtitulo{
-        font-size: 20px;
-        }
-        .container_texto{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 20px;
-        
-        }
-        .texto{
-          grid-column: auto;
-          margin-top: auto;
-          margin-left: 0;
-          text-align: left;
-          margin-left: 5px;
-          margin-right: auto;
-          width: 100%;
-        }
-        
-        .t3{
-          font-size: 15px;
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
 
-        }
-        .t5{
-          font-size: 15px;
-
-        }
-        .t6{
-          font-size: 15px;
-          
-        }
-        .t7{
-          font-size: 15px;
-        }
-       
-        .texto img{
-          width: 40px;
-          height: 40px;
-        }
-        .img2{
-          margin-left: auto;
-        }
-        .img3{
-          margin-left:auto;
-        }
-
-          #centro{
-          
-          justify-content: center;
-          text-align: left;
-        }
-        .sup{
-          background-color: white;
-          height: 100px;
-          text-align: center;
-          
-        }
-          .contato{
-          font-size: 10px;
-        }
-          .cont{
-            font-size: 20px;
-          }
-          .sup1{
-          background-color: #97080A;
-          border-radius: 40px;
-          width: 200px;
-          height: 40px;
-          margin-top: 50px;
-          font-size: 20px;
-          color: white;
-          border: none;
-        }
-        .rodape{
-          background-color: #97080A;
-          margin-bottom: 0;
-          margin-top: 50px;
-          height: 30px;
-          user-select: none;
-        }
-          .rod1{
-          color: #97080A;
-          font-size: 20px;
-        }
+  /* Ajuste para Tablets */
+  .btn-cadastro {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 20px;
   }
+  
+  .icone-perfil {
+    width: 40px;  
+    height: 40px;
+  }
+
+  #carouselExampleIndicators {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .img_festa {
+    display: block;
+    width: 100%;
+  }
+  
+  .conteiner-carrossel {
+    width: 100%;
+    background-color: #97080A;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+  }
+  
+  .bemvindo {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    height: 26pc;
+    padding: 100px
+  }
+
+  .t1 {
+    font-size: 30px;
+    color: #97080A;
+    position: absolute;
+    margin-top: 140px;
+    text-align: center;
+  }
+
+  .cdp {
+    font-size: 21px;
+    color: black;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 2px;
+  }
+
+  .container_botao {
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    height: 20px;
+    align-items: center;
+    margin-top: -40px;
+    margin-left: 6.5pc;
+  }
+
+  .bot1,
+  .bot2 {
+    border-radius: 50px;
+    background-color: #97080A; 
+    height: 80px;
+    width: 280px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin: 10px 0;
+    margin-bottom: 20px;
+  }
+
+  .bot1 a:hover,
+  .bot2 a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  .tt1, .tt2 {
+    color: white;
+    font-size: 21px;
+  }
+
+  .noite {
+    text-align: center;
+    color: white;
+    background-color: #97080A;
+    padding: 40px 20px;
+  }
+
+  .subtitulo {
+    font-size: 30px;
+  }
+
+  .container_texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .texto {
+    width: 90%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .texto img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .sup {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .contato {
+    font-size: 14px;
+  }
+
+  .cont {
+    font-size: 30px;
+  }
+
+  .sup1 {
+    background-color: #97080A;
+    border-radius: 40px;
+    width: 240px;
+    height: 50px;
+    margin-top: 30px;
+    font-size: 20px;
+    color: white;
+    border: none;
+  }
+
+  .noite {
+  height: 635px;
+  }
+
+  .rodape {
+    background-color: #97080A;
+    user-select: none;
+    width: 104%;
+    margin-left: -20px;
+  }
+
+  .rod1 {
+    color: #97080A;
+    font-size: 20px;
+  }
+}
+
+/* Ajuste para Celulares */
+@media (max-width: 780px) {
+  .t1 {
+    font-size: 25px;
+  }
+
+  .cdp {
+    font-size: 20px;
+  }
+
+  .bot1,
+  .bot2 {
+    width: 220px;
+    height: 55px;
+    font-size: 14px;
+    margin-left: -3px;
+  }
+
+  .container_botao {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 20px;
+    align-items: center;
+    margin-top: -40px;
+    margin-left: -1.4pc;
+  }
+
+  .tt1, .tt2 {
+    font-size: 16px;
+  }
+
+  .t1 {
+    font-size: 30px;
+    color: #97080A;
+    position: absolute;
+    margin-top: 140px;
+    width: 25pc;
+    margin-right: 200px;
+    text-align: justify;
+  }
+
+  .cdp {
+    font-size: 21px;
+    color: black;
+    position: absolute;
+    margin-top: 155px;
+    width: 25pc;
+    margin-right: 100px;
+    text-align: justify;
+  }
+
+  .bemvindo {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    height: 35pc;
+    padding: 100px
+  }
+
+  .subtitulo {
+    font-size: 30px;
+  }
+
+  .texto {
+    width: 100%;
+  }
+
+  .t3 {
+    font-size: 25px;
+  }
+
+  .t5 {
+    font-size: 25px;
+  }
+
+  .t6 {
+    font-size: 25px;
+  }
+
+  .t7 {
+    font-size: 25px;
+    text-align: start;
+  }
+
+  .noite {
+  height: 750px;
+  }
+
+  .texto img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .sup1 {
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .rod1 {
+    font-size: 16px;
+  }
+
+  .rodape {
+    background-color: #97080A;
+    user-select: none;
+    width: 107.2%;
+    margin-left: -20px;
+  }
+}
+@media (max-width: 480px) {
+  .bot1,
+  .bot2 {
+    width: 150px;
+    height: 50px;
+    margin-left: -20px;
+  }
+
+  .container_botao {
+    display: flex;
+    gap: 35px;
+    width: 100%;
+    height: 20px;
+    align-items: center;
+    margin-top: -40px;
+    border: black solid;
+  }
+
+  .tt1, .tt2 {
+    font-size: 11px;
+    
+  }
+
+  .t1 {
+    font-size: 30px;
+    color: #97080A;
+    position:absolute;
+    margin-top: 140px;
+    width: 25pc;
+    margin-left: -85px;
+    text-align: center;
+    
+ 
+  }
+
+  .cdp {
+    font-size: 15px;
+    color: black;
+    position: absolute;
+    margin-top: 155px;
+    width: 25pc;
+    margin-left: -85px;
+    text-align: center;
+    
+
+ 
+  }
+
+  .bemvindo {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    height: 35pc;
+    padding: 100px;
+
+  }
+
+  .subtitulo {
+    font-size: 30px;
+    
+  }
+
+  .texto {
+    width: 100%;
+    
+  }
+
+  .t3 {
+    font-size: 20px;
+  }
+
+  .t5 {
+    font-size: 20px;
+  }
+
+  .t6 {
+    font-size: 20px;
+  }
+
+  .t7 {
+    font-size: 20px;
+    text-align: start;
+  }
+
+  .texto img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .sup1 {
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+    
+  }
+
+  .rod1 {
+    font-size: 16px;
+    
+  }
+
+  .rodape {
+    background-color: #97080A;
+    user-select: none;
+    width: 110.5%;
+  }
+  body{
+
+  width: 110.5%;
+  }
+}

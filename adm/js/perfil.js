@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1. carrega usuário do localStorage
   const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
   if (!usuario) {
-    t("Você precisa fazer login primeiro.");
-    window.location.href = "index.html";
+    alert("Você precisa fazer login primeiro.");
+    window.location.href = "../index.html";
     return;
   }
 
@@ -21,9 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const spanSenha  = document.getElementById("senha");
   const inputSenha = document.getElementById("input-senha");
 
+
   // 2. preenche campos iniciais
-  document.getElementById("username").innerText = usuario.nome;
-  spanNome.innerText  = `Nome completo: ${usuario.nome}`;
+  document.getElementById("username").innerText = localStorage.getItem("usuarioNome1", data.cliente?.nome || "");
+  spanNome.innerText  = `Nome completo: ${usuarioNome1}`;
   inputNome.value     = usuario.nome;
   if (usuario.telefone) {
     spanTel.innerText  = `Telefone: ${usuario.telefone}`;
@@ -55,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // envia PATCH para o servidor
       try {
-        const resp = await fetch(`https://back-end-festa-junina.onrender.com/api/Usuario${usuario.id}`, {
-          method: "PATCH",
+        const resp = await fetch(`https://back-end-festa-junina.onrender.com/api/Usuario/AutualizarPerfil/${usuario.id}`, {
+          method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             nome: novoNome,

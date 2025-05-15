@@ -3,18 +3,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const lembrarCheckbox = document.getElementById("lembrarUsuario");
   const mensagemErro = document.getElementById("mensagemErroPopup");
 
-  if (!form) return;
+  
+  function mostrarModal(mensagem, tipo = "info") {
+    const modal = document.getElementById("myModal");
+    const textoModal = document.getElementById("texto_modal");
+    const fecharModal = document.getElementById("close_modal");
 
-  function mostrarErro(mensagem) {
-    mensagemErro.textContent = mensagem;
-    mensagemErro.style.display = "block";
-    mensagemErro.style.opacity = "1";
+    textoModal.textContent = mensagem;
+
+    modal.classList.remove("modal-success", "modal-error");
+    if (tipo === "sucesso") modal.classList.add("modal-success");
+    if (tipo === "erro") modal.classList.add("modal-error");
+
+    modal.style.display = "block";
+
+    fecharModal.onclick = () => {
+      modal.style.display = "none";
+    };
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+
     setTimeout(() => {
-      mensagemErro.style.opacity = "0";
-      setTimeout(() => {
-        mensagemErro.style.display = "none";
-      }, 300);
-    }, 4000);
+      modal.style.display = "none";
+    }, 3000);
   }
 
   form.addEventListener("submit", async e => {
@@ -36,22 +50,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
 
       // === ALERT DE DEBUG ===
-      alert("Dados retornados da API:\n" + JSON.stringify(data, null, 2));
+      // alert("Dados retornados da API:\n" + JSON.stringify(data, null, 2));
 
       if (!response.ok) {
         console.error("Erro do servidor:", data);
-        mostrarErro("Email ou senha incorretos.");
+        mostrarModal("Email ou senha errados")
         return;
       }
 
       // === LOGIN BEM-SUCEDIDO ===
-      alert(`Bem-vindo, ${data.cliente?.nome || "usuário"}!`);
-
+      mostrarModal(`Bem-vindo, ${data.cliente?.nome || "usuário"}!`)
       // Grava dados principais no localStorage
-      localStorage.setItem("usuarioNome", data.cliente?.nome || "");
-      localStorage.setItem("usuarioEmail",data.cliente?.email || email);
-      localStorage.setItem("usuarioTelefone", data.cliente?.telefone || "");
-      localStorage.setItem("usuarioSenha", senha);
+      localStorage.setItem("usuarioId", data.cliente?.id || "");
+      localStorage.setItem("usuarioNome1", data.cliente?.nome || "");
+      localStorage.setItem("usuarioEmail1",data.cliente?.email || email);
+      localStorage.setItem("usuarioTelefone1", data.cliente?.telefone || "");
+      localStorage.setItem("usuarioSenha1", senha);
       localStorage.setItem('tipo_perfil', data.cliente?.tipo_perfil || "");
 
       // Novo: pega e salva o perfil_id para controle de permissões
@@ -69,10 +83,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Redireciona para a home
-      window.location.href = "./adm/views/home.html";
+      setTimeout(() => {
+      window.location.href = "./views/home.html";
+    }, 3000);
+      
     } catch (error) {
       console.error("Erro ao fazer login:", error);
-      mostrarErro("Erro ao se conectar. Tente novamente.");
+
     }
   });
 });

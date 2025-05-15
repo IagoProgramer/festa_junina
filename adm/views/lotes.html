@@ -8,22 +8,29 @@
 </head>
 <body>
   <div class="top-bar">
+    <div class="menu-container">
+            <img src="../images/menu.png" class="icone_menu" id="menu">
+            <div class="menu-options2" id="menu-options2">
+                <a href="../views/home.html" id="none_border">Início</a>
+                <a href="../views/lotes.html">Gerenciar Lotes</a> 
+                <a href="../views/gerenciamento.html">Gerenciar Festa</a> 
+                <a href="../views/baixa.html">Gerenciar Pagamentos</a> 
+                <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
+            </div>
+        </div>
     <img src="../images/SENAI_São_Paulo_logo.png" alt="Logo SENAI" class="logo" />
    
   </div>
   
   <!-- Faixa vermelha: menu centralizado -->
   <header class="navbar">
-    <nav>
-      <a href="../views/home.html">Início</a> |
-      <a href="../views/lotes.html">Gerenciar Lotes</a> |
-      <a href="../views/gerenciamento.html">Gerenciar Festa</a> |
-      <a href="../views/baixa.html">Gerenciar Pagamentos</a> |
-      <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
-      <a href="../views/perfil.html">
-        <img src="../images/icon.png" alt="Perfil" class="perfil-icon" />
-      </a>
-    </nav>
+    <div class="menu-options" id="centro_menu">
+            <a href="../views/home.html" id="none_border">Início</a>
+            <a href="../views/lotes.html">Gerenciar Lotes</a> 
+            <a href="../views/gerenciamento.html">Gerenciar Festa</a> 
+            <a href="../views/baixa.html">Gerenciar Pagamentos</a> 
+            <a href="../gerenciamento/cadastroadm.html">Cadastro</a>
+      </div>
   </header>
   <div class="container">
     <!-- link de criar lote redireciona para sua página de cadastro -->
@@ -46,5 +53,6 @@
   
   
   <script src="../js/lotes.js"></script>
+  <script src="../js/menu.js"></script>
 </body>
 </html>

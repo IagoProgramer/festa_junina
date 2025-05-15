@@ -12,24 +12,22 @@ body {
 
 header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-}
-
-.logo img {
-    width: 180px;
-    margin: 10px 0;
-}
-
-.menu-bar {
-    width: 100%;
-    background-color: #97080A;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .back-btn {
@@ -39,9 +37,16 @@ header {
     font-size: 16px;
 }
 
-.usuario img {
-    width: 40px;
-    height: auto;
+.usuario {
+    width: 63px;
+    height: 63px;
+    cursor: pointer;
+    margin-right: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin-top: 10px;
 }
 
 
@@ -60,10 +65,9 @@ main {
 }
 
 .mapa-img {
-    width: 100%;
+    width: 60%;
     max-width: 90%;
     height: auto;
-    border: 1px solid #ccc;
 }
 
 .sup{
@@ -104,8 +108,29 @@ main {
     font-size: 30px;
   }
   
+@media (max-width: 1024px) {
+    .mapa-img {
+        width: 80%;
+        max-width: 90%;
+        height: auto;
+    }
 
-@media (max-width: 500px) {
+    .menu-container {
+        width: 10px;
+        margin-right: 63.5pc;
+        position: absolute;
+    }
+    .navbar {
+        background-color: #97080A;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        background-color: #97080A;
+        padding: 40px;
+    }
     header{
         display: flex;
         flex-direction: row;
@@ -128,7 +153,7 @@ main {
     .usuario img {
         width: 40px;
         position: absolute;
-        left: 360px;
+        left: 20px;
         margin-top: -10px; 
     }
 

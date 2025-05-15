@@ -6,27 +6,34 @@
     <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/modal.css">
     <title>Cadastro/Login Festa Junina</title>
   </head>
 
-  <body> 
+  <body>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close_modal">&times;</span>
+        <p id="texto_modal"></p>
+      </div>
+    </div>
     <header>
       <div class="top-header">
         <div class="menu-container">
-        <img src="../img/menu.png" class="icone_menu" id="menu" class="cima_menu">
-        <div class="menu-options2" id="menu-options2">
-          <a href="../index.html"  id="none_border">Início</a>
-        <a href="./compraingresso.html">Garanta seu ingresso</a>
-        <a href="./qrcode.html">Ver meus ingressos</a>
-        <a href="./mapa.html">Mapa Da Festa</a>
-        <a href="./misscaipira.html">Miss Caipíra</a>
-        <a href="./cadastro.html">Criar/Entrar na conta</a>
+          <img src="../img/menu.png" class="icone_menu" id="menu" class="cima_menu">
+          <div class="menu-options2" id="menu-options2">
+            <a href="../index.html"  id="none_border">Início</a>
+            <a href="./compraingresso.html">Garanta seu ingresso</a>
+            <a href="./qrcode.html">Ver meus ingressos</a>
+            <a href="./mapa.html">Mapa Da Festa</a>
+            <a href="./misscaipira.html">Miss Caipíra</a>
+            <a href="./cadastro.html">Criar/Entrar na conta</a>
+          </div>
         </div>
         <img src="../img/SENAI_São_Paulo_logo.png" alt="SENAI Logo" class="logo" />
-        
       </div>
     </header>
-    <div class="bottom-bar">
+    <div class="navbar">
         <div class="menu-options" id="centro_menu">
           <a href="../index.html"  id="none_border">Início</a>
           <a href="./compraingresso.html">Garanta seu ingresso</a>
@@ -35,10 +42,7 @@
           <a href="./misscaipira.html">Miss Caipira</a>
           <a href="./cadastro.html">Criar/Entrar na conta</a>
         </div>
-        <a href="#" class="icon icon-user">
-          <i class="far fa-user-circle"></i>
-        </a>
-      </div>
+    </div>
     <div class="txt1">Preencha os dados solicitados para criar uma conta.</div>
     
     <div class="main">

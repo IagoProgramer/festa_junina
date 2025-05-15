@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const nomeUsuario = (localStorage.getItem("nomeUsuario") || "").trim().toLowerCase();
+  const perfilUsuario = (localStorage.getItem("tipo_perfil") || "").trim().toLowerCase();
 
-  if (nomeUsuario !== "roberto") {
-    alert("Acesso restrito! Somente o usuário 'roberto' pode acessar esta página.");
-    window.location.href = "../index.html"; // redireciona para a home ou login
+  if (perfilUsuario !== "1") {
+    alert("Acesso restrito! Somente os usuários com perfil de nível máximo têm acesso");
+    window.location.href = "../views/home.html"; // redireciona para a home
   }
 });
 

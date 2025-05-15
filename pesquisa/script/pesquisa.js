@@ -1,8 +1,8 @@
 // const urlPerguntas = 'http://localhost:3000/perguntas'; // ENDPOINT DAS PERGUNTAS FAKE
 // const urlRespostas = 'http://localhost:3000/respostas'; 
 
-const urlPerguntas = 'https://back-end-festa-junina.onrender.com/api/Perguntas';
-const urlRespostas = 'https://back-end-festa-junina.onrender.com/api/Respostas/CadastrarRespostas'
+const urlPerguntas = 'http://10.90.146.37/api/api/Perguntas';
+const urlRespostas = 'http://10.90.146.37/api/api/Respostas/CadastrarRespostas'
 
 class Perguntas {
     constructor(id, nome, tipo_perguntas_id) {

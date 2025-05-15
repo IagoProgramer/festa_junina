@@ -4,9 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Área do Administrador - SENAI 2025</title>
-  <link rel="stylesheet" href="adm/css/index.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/modal.css">
 </head>
 <body>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close_modal">&times;</span>
+        <p id="texto_modal"></p>
+      </div>
+    </div>
   <main>
     <div class="login-container">
       <h2>Bem-vindo à página de perfil do administrador!</h2>
@@ -22,8 +29,7 @@
     </div>
   </main>
 
-  <div id="mensagemErroPopup" style="display: none;"></div>
 
-  <script src="adm/js/auth_script.js"></script> 
+  <script src="js/auth_script.js"></script>
 </body>
 </html>

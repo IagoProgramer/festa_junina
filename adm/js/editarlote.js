@@ -1,15 +1,8 @@
-
-
-const url = 'https://back-end-festa-junina.onrender.com/api/Lote/EditarLote'
-
+const url = 'https://back-end-festa-junina.onrender.com/api/Lote/EditarLote';
 
 let lotePronto = null;
 
-const usuario_id = 1//FAZER O LOCALSTORAGE (ou outro tipo de armazenamento do id do usuario ao fazer login)  
-
-function teste(){
-  console.log("teste")
-}
+const idUsuario = (localStorage.getItem("usuarioId") || "");
 
 function salvarEdicao(){
   const valor = document.getElementById('valor').value;
@@ -43,18 +36,19 @@ function salvarEdicao(){
   //   return;
   // }
 
+  const urlParametro = new URLSearchParams(window.location.search);
+  const idUrl = Number(urlParametro.get('id'));
 
-  lotePronto = {
-    id: 0,
+  lotePronto = 
+    {
+    id: idUrl,
     qtd_total: parseInt(quantidade),
     data_inicio: new Date(abertura).toISOString(),
     data_termino: new Date(fechamento).toISOString(),
     valor_un: parseFloat(valor.replace(",", ".")),
-    usuario_id: usuario_id,
+    usuario_id: Number(idUsuario),
     ativo: 0
-  };
-
-  console.log("lote pronto: ", lotePronto)  
+    };
 }
 
 function abrirmodal(){
@@ -89,13 +83,15 @@ function salvar() {
   //   alert("Você precisa concluir a edição antes de salvar.");
   //   return;
   // }
-  console.log("Dados a serem enviados:", JSON.stringify(lotePronto));
-  fetch(url, {
-    method: 'POST',
+  const urlParametro = new URLSearchParams(window.location.search);
+  const idUrl = Number(urlParametro.get('id'));
+  console.log(JSON.stringify(lotePronto, null, 2));
+  fetch(`${url}/${idUrl}`, {
+    method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(lotePronto)
+    body: JSON.stringify(lotePronto, null, 2)
   })
   .then(async response => {
     const text = await response.text();
@@ -104,7 +100,13 @@ function salvar() {
     }
     const data = JSON.parse(text);
     console.log('Lote criado:', data);
-    abrirmodal()
+
+    abrirmodal();
+
+    setTimeout(() => {
+      window.location.href = '../views/lotes.html'
+      fecharmodal();
+    }, 5000);
   })
   .catch(error => {
     console.error('Erro ao criar lote:', error);

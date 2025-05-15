@@ -1,31 +1,45 @@
 body{
     margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .senai{
-    height: 60px;
-}
- 
-header{
-    background-color: white;
-    width: 100%;
-    height: 84px;
+  height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    margin: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
+    align-items: center;
 }
 
-.cabecalho2{
-    background-color: #97080A;
-    width: 100%;
-    height: 64px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+ 
+header{
     display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 5pc;
 }
+
 .botao_logout{
     margin-right: 0;
-    margin-left: 1800px;
+    margin-left: 88.5pc;
+    margin-top: 8px;
+    width: 63px;
+    height: 60px;
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botao_logout img{
     width: 60px;
     height: 60px;
 }
@@ -113,6 +127,7 @@ header{
     border-radius: 8px;
     display: flex;
     align-items: center;
+    margin-bottom: 4px;
 }
 
 .info-item1{
@@ -121,6 +136,7 @@ header{
     border-radius: 8px;
     display: flex;
     align-items: center;
+    margin-bottom: 4px;
 }
   
 
@@ -228,12 +244,16 @@ input{
     border: none;
   }
     .rodape{
-    background-color: #97080A;
-    margin-bottom: 0;
-    margin-top: 30px;
-    height: 50px;
-    user-select: none;
-  }
+      background-color: #97080A;
+      height: 50px;
+      text-align: center;
+      color: white;
+      user-select: none;
+      width: 100%;
+      margin-top: auto; /* Empurra o rodapé para o final */
+      line-height: 50px; /* Centraliza verticalmente */
+      margin-top: 10px;
+    }
     .rod1{
     color: #97080A;
   }
@@ -242,11 +262,81 @@ input{
     font-size: 20px;
     font-family: sans-serif;
   }
-  @media (max-width: 500px) {
+  
+  @media (max-width: 1024px) {
+    .navbar {
+        background-color: #97080A;
+        padding: 40px;
+    }
+
+    .menu-container {
+      margin-right: auto;
+    }
+
+    .senai {
+      position: absolute;
+      margin-left: 10px;
+    }
+
+    .botao_logout {
+      margin-left: 59pc;
+    }
+
+    .menu-options {
+      display: none;
+    }
+
+    #centro_menu {
+      display: none;
+    }
+
+    .rodape{
+      background-color: #97080A;
+      margin-top: 40px;
+      height: 70px;
+      user-select: none;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .cont b {
+      font-size: 30px;
+    }
+
+    .foto-user {
+      margin-left: -5pc;
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    header {
+      margin-bottom: 1pc;
+    }
+
+    .navbar {
+        background-color: #97080A;
+        padding: 40px;
+    }
+
   .container-perfil {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+  }
+
+  .perfil {
+    margin-left: 109px;
+  }
+
+  .menu-container {
+    margin-right: auto;
+  }
+
+  .senai {
+    position: absolute;
+    margin-left: 10px;
   }
 
   .dados {
@@ -257,6 +347,7 @@ input{
 
   .foto-user {
     width: 200px;
+    margin: 0 auto;
   }
 
   #editar-btn {
@@ -272,6 +363,7 @@ input{
   .info-container {
     width: 90%;
     margin-top: 50px;
+    
   }
 
   header {
@@ -285,5 +377,9 @@ input{
   .botao_logout {
     margin-left: auto;
     margin-right: 10px;
+  }
+
+  .cont b {
+    font-size: 25px;
   }
 }

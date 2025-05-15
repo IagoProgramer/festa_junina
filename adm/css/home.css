@@ -5,10 +5,10 @@ body {
   background-color: #fff;
 }
 
-.perfil {
+.perfil-icon {
   position: absolute;
   right: 24px;
-  top: 10px;
+  top: 1.8pc;
   height: 60px;
   width: 60px;
   color: #ffffff;
@@ -22,7 +22,6 @@ body {
 .fundo1 {
   background-color: var(--fj-red);
   padding: 40px 0;
-  margin-top: 30px;
   width: 100%;
 }
 
