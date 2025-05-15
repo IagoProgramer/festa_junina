@@ -4,10 +4,7 @@
       "source": "/",
       "destination": "/index.html"
     },
-        {
-      "source": "/index.html",
-      "destination": "/index.html"
-    },
+
     {
       "source": "/adm",
       "destination": "/adm/index.html"
