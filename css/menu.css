@@ -147,7 +147,10 @@
       left: 28%;
       top: 10,5%;
     }
-
+      .senai{
+      width: 35%;
+      height: 55px;
+    }
     .menu-options2{
       grid-template-columns: 1fr;
       left: 0;
@@ -189,4 +192,8 @@
     #menu-options.ativo {
       display: none;
     }
+      .senai{
+  width: 35%;
+  height: 55px;
+}
   }
