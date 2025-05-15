@@ -55,6 +55,7 @@ body {
   top: 15px;
 }
 
+
 .icone-perfil {
   width: 63px;
   height: 63px;
@@ -659,4 +660,8 @@ margin-top: 60px;
 
   width: 110.5%;
   }
+  .senai{
+  width: 35%;
+  height: 55px;
+}
 }

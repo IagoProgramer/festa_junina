@@ -331,6 +331,7 @@
       height: 300px;
       border-radius: 30px;
       margin: 0 auto;
+      margin-top: 50px;
       justify-content: center;
     }
     .texto {
