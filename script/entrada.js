@@ -147,29 +147,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const botaoEsqueciSenha = document.getElementById("esqueciSenha");
-  if (botaoEsqueciSenha) {
-    botaoEsqueciSenha.addEventListener("click", async function (event) {
-      event.preventDefault();
-      const email = document.getElementById("loginEmail").value;
 
-      try {
-        const response = await fetch(`${apiBase}/esqueci-senha`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email })
-        });
+if (botaoEsqueciSenha) {
+  botaoEsqueciSenha.addEventListener("click", async function (event) {
+    event.preventDefault();
+    const email = document.getElementById("loginEmail").value;
 
-        const data = await response.json();
+    try {
+      const response = await fetch(`${apiBase}/esqueci-senha`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(email) // Enviando apenas a string diretamente
+      });
 
-        if (response.ok) {
-          mostrarModal("Link de recuperação enviado para seu email, pode demorar demorar para o email de recupeção para chegar o email", "sucesso");
-        } else {
-          mostrarModal("Erro ao solicitar nova senha. Verifique ou insira o email.", "erro");
-        }
-      } catch (error) {
-        mostrarModal("Erro de conexão ao solicitar nova senha.", "erro");
+      const data = await response.json();
+
+      if (response.ok) {
+        mostrarModal(
+          "Link de recuperação enviado para seu email. Pode demorar alguns minutos para chegar.",
+          "sucesso"
+        );
+      } else {
+        mostrarModal("Erro ao solicitar nova senha. Verifique o email.", "erro");
       }
-    });
+    } catch (error) {
+      mostrarModal("Erro de conexão ao solicitar nova senha.", "erro");
+    }
+  });
+
+
   }
 
   if (localStorage.getItem("lembrarUsuario") === "true") {
